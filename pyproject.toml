@@ -1,0 +1,19 @@
+[project]
+name = "resume-ci-automation"
+version = "0.1.0"
+description = "Generates resumes from ci"
+authors = [
+    {name = "Aditya Rao", email = "adityarao2005@gmail.com"},
+]
+dependencies = ["jinja2>=3.1.6", "pyyaml>=6.0.3", "pydantic>=2.12.4"]
+requires-python = ">=3.11"
+readme = "README.md"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+
+[tool.pdm]
+distribution = true
