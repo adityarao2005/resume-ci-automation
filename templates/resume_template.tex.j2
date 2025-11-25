@@ -1,0 +1,68 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{booktabs}
+
+% Remove page numbers
+\pagestyle{empty}
+
+\begin{document}
+
+% Centered header
+\begin{center}
+    {\LARGE \textbf{ {{- name -}} }}\\[0.3cm]
+    {{- email -}} | {{- phone -}}\\[0.2cm]
+    {% if linkedin %}LinkedIn: {{ linkedin }}{% endif %}
+    {% if github %}| GitHub: {{ github }}{% endif %}
+\end{center}
+
+\vspace{0.5cm}
+
+% Education Section
+\noindent\textbf{\large Education}\\
+\rule{\textwidth}{0.4pt}
+
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+    \textbf{ {{- education.degree -}} } & {{- education.graduation_date -}} \\
+    {{- education.institution -}} & {{- education.location -}} \\
+    {% if education.gpa %}GPA: {{ education.gpa }}{% endif %} & \\
+\end{tabularx}
+
+\vspace{0.5cm}
+
+% Experience Section
+\noindent\textbf{\large Experience}\\
+\rule{\textwidth}{0.4pt}
+
+{% for job in experience %}
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+    \textbf{ {{- job.title -}} } & {{- job.start_date -}} -- {{- job.end_date -}} \\
+    \textit{ {{- job.company -}} } & {{- job.location -}} \\
+\end{tabularx}
+\begin{itemize}
+    {% for responsibility in job.responsibilities %}
+    \item {{ responsibility }}
+    {% endfor %}
+\end{itemize}
+\vspace{0.3cm}
+{% endfor %}
+
+% Skills Section
+\noindent\textbf{\large Skills}\\
+\rule{\textwidth}{0.4pt}
+
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Category} & \textbf{Skills} \\
+\hline
+{% for skill_category in skills %}
+{{ skill_category.category }} & {{ skill_category.items|join(', ') }} \\
+\hline
+{% endfor %}
+\end{tabular}
+\end{center}
+
+\end{document}

@@ -1,0 +1,6 @@
+services:
+  resume_ci_automation:
+    build: .
+    volumes:
+      - ./data:/app/data
+      - ./out:/app/out
