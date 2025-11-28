@@ -219,6 +219,6 @@ skills:
     - name: Udemy AWS Certified Cloud Practitioner
       issuer: Udemy
       date: May 2024
-    - name: Docker & Kubernetes: The Complete Guide
+    - name: "Docker & Kubernetes: The Complete Guide"
       issuer: Udemy
       date: June 2024
