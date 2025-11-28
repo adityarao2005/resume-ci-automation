@@ -159,6 +159,7 @@ extra_curriculars:
     organization: IEEE McMaster Student Branch
     start_date: Nov 2024
     end_date: Present
+    location: Hamilton, ON
     details:
       - Set up an RPi 3B+ Cluster for a server to handle up to 100 clients in an instant with a budget of $5000
       - Managed and provisioned a CI/CD pipeline which generates Docker images for our Kubernetes cluster
@@ -216,10 +217,10 @@ skills:
     - Badminton
     - Swimming
     - Chess
-  certifications:
-    - name: Udemy AWS Certified Cloud Practitioner
-      issuer: Udemy
-      date: May 2024
-    - name: "Docker & Kubernetes: The Complete Guide"
-      issuer: Udemy
-      date: June 2024
+certifications:
+  - name: AWS Certified Cloud Practitioner
+    issuer: Udemy
+    date: May 2024
+  - name: "Docker & Kubernetes: The Complete Guide"
+    issuer: Udemy
+    date: June 2024

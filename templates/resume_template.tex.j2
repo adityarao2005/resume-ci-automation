@@ -163,6 +163,23 @@
       <BLOCK>endfor</BLOCK>
     \resumeSubHeadingListEnd
 
+    %-----------Extra Curriculars-----------
+\section{Extra Curriculars}
+  \resumeSubHeadingListStart
+
+  <BLOCK>for exp in extra_curriculars</BLOCK>
+    \resumeSubheading
+      {<VAR>exp.position | latex_escape</VAR>}{<VAR>exp.start_date</VAR> -- <VAR>exp.end_date</VAR>}
+      {<VAR>exp.organization | latex_escape</VAR>}{<VAR>exp.location | latex_escape</VAR>}
+      \resumeItemListStart
+        <BLOCK>for detail in exp.details</BLOCK>
+        \resumeItem{<VAR>detail | latex_escape</VAR>}
+        <BLOCK>endfor</BLOCK>
+      \resumeItemListEnd
+    <BLOCK>endfor</BLOCK>
+
+  \resumeSubHeadingListEnd
+
 
 
 %
@@ -170,13 +187,23 @@
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: Java, Python, C/C++, SQL (Postgres), JavaScript, HTML/CSS, R} \\
-     \textbf{Frameworks}{: React, Node.js, Flask, JUnit, WordPress, Material-UI, FastAPI} \\
-     \textbf{Developer Tools}{: Git, Docker, TravisCI, Google Cloud Platform, VS Code, Visual Studio, PyCharm, IntelliJ, Eclipse} \\
-     \textbf{Libraries}{: pandas, NumPy, Matplotlib}
+        \textbf{Languages}{: <BLOCK>for item in skills.languages</BLOCK><VAR>item | latex_escape</VAR><BLOCK>if not loop.last</BLOCK>, <BLOCK>endif</BLOCK><BLOCK>endfor</BLOCK>} \\
+        \textbf{Frameworks}{: <BLOCK>for item in skills.frameworks</BLOCK><VAR>item | latex_escape</VAR><BLOCK>if not loop.last</BLOCK>, <BLOCK>endif</BLOCK><BLOCK>endfor</BLOCK>} \\
+        \textbf{Developer Tools}{: <BLOCK>for item in skills.tools</BLOCK><VAR>item | latex_escape</VAR><BLOCK>if not loop.last</BLOCK>, <BLOCK>endif</BLOCK><BLOCK>endfor</BLOCK>} \\
+        \textbf{Libraries}{: <BLOCK>for item in skills.libraries</BLOCK><VAR>item | latex_escape</VAR><BLOCK>if not loop.last</BLOCK>, <BLOCK>endif</BLOCK><BLOCK>endfor</BLOCK>} \\
+        \textbf{Hobbies}{: <BLOCK>for item in skills.hobbies</BLOCK><VAR>item | latex_escape</VAR><BLOCK>if not loop.last</BLOCK>, <BLOCK>endif</BLOCK><BLOCK>endfor</BLOCK>} \\
     }}
  \end{itemize}
 
+ %-----------Certifications-----------
+\section{Certifications}
+  <BLOCK>for cert in certifications</BLOCK>
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {<VAR>cert.name | latex_escape</VAR>}{<VAR>cert.date | latex_escape</VAR>}
+      {<VAR>cert.issuer | latex_escape</VAR>}{}
+  \resumeSubHeadingListEnd
+  <BLOCK>endfor</BLOCK>
 
 %-------------------------------------------
 \end{document}
