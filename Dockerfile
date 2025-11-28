@@ -6,7 +6,7 @@ RUN apk add --no-cache python3 py3-pip
 
 # Install additional LaTeX packages
 RUN tlmgr update --self && \
-    tlmgr install preprint titlesec enumitem marvosym
+    tlmgr install preprint titlesec enumitem marvosym fontawesome7
 
 WORKDIR /app
 
