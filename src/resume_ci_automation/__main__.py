@@ -1,6 +1,8 @@
 import subprocess
 import yaml
 from jinja2 import Environment, FileSystemLoader
+import os
+import shutil
 
 # Load YAML data
 with open("data/resume.yaml", "r") as file:
@@ -16,6 +18,6 @@ if __name__ == "__main__":
     with open("resume.tex", "w") as f:
         f.write(output)
 
-    subprocess.run(["pdflatex", "resume.tex", "-o", "out/resume.pdf"])
-
-    print("Resume CI Automation Package")
+    subprocess.run(["pdflatex", "resume.tex", "-o", "resume.pdf"])
+    shutil.move("resume.pdf", "out/resume.pdf")
+    
