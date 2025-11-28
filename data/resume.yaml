@@ -26,9 +26,26 @@ experiences:
     end_date: Aug 2025
     location: Markham, ON
     details:
-      - 
+      - Developing WebSphere Application Server v8.5.5, v9.0, WebSphere Liberty, and OpenLiberty and the tools which support development.
+      - Modernizing tools based on legacy code and dependencies to modern dockerized applications.
     skills:
-      - 
+      - Docker
+      - Java
+      - Jakarta EE
+      - Linux
+      - MicroProfile
+      - WebSphere Application Server
+      - OpenLiberty
+      - WebSphere Liberty
+      - Functional Acceptance Testing
+      - React.js
+      - Python
+      - Modernization
+      - Legacy Modernization
+      - Spring Boot
+      - OpenShift
+      - Kubernetes
+      - Java EE
   - title: Full Stack Developer Intern
     company: Medium AI
     links:
@@ -51,8 +68,100 @@ experiences:
       - Web APIs
 projects:
   - title: WebCraft
+    start_date: Apr 2025
+    end_date: Sept 2025
     links:
-      github: 
+      github: https://github.com/adityarao2005/WebCraft
+    details:
+      - Developed a networking and asynchronous programming library using C++ 23 features to allow for developers used to Node.js and Python to easily write C++ code.
+      - Created coroutine abstractions, asynchronous runtimes, streams, and networking module abstractions to simplify cross platform C++ development.
+      - Created CI/CD pipelines and unit testing using gtest, CTest, Vcpkg, and Github Actions to ensure code quality and reliability.
+    skills:
+      - C++ 23
+      - CMake
+      - CTest
+      - Vcpkg
+      - Networking
+      - Asynchronous Programming
+      - Github Actions
+  - title: Resume Builder
+    start_date: Aug 2024
+    end_date: Feb 2025
+    links:
+      github: https://github.com/adityarao2005/resume-builder
+    details:
+      - Developed an AI-powered resume builder for automated resume creation, scoring, and real-time editing.
+      - Improved resume management by reducing manual effort in tailoring resumes for job applications.
+    skills:
+      - Java
+      - Spring Boot
+      - Next.js
+      - Typescript
+      - Python
+      - FastAPI
+      - LangChain
+      - Docker
+  - title: FashioNova
+    start_date: Oct 2024
+    end_date: Oct 2024
+    links:
+      github: https://github.com/robinrong1/intelligent-wardrobe/
+      devpost: https://devpost.com/software/fashionova
+    details:
+      - Developed a virtual wardrobe and AI fashion advisor in 36 hours at Hack the Valley 9 at UofT Scarborough
+      - Created an OpenCV pipeline using Python Flask and Socket.io to fit virtual clothes onto users via live video feed
+      - Leveraged Cloudflare AI to suggest outfits based on the occasion, promoting sustainable fashion consumption.
+    skills:
+      - Typescript
+      - Next.js
+      - Python
+      - Socket.io
+      - OpenCV
+      - Cloudflare AI
+      - Flask
+  - title: Smart Study Buddy 
+    start_date: Oct 2024
+    end_date: Oct 2024
+    links:
+      github: https://github.com/robinrong1/intelligent-wardrobe/
+      devpost: https://devpost.com/software/fashionova
+    details:
+      - Developed a virtual wardrobe and AI fashion advisor in 36 hours at Hack the Valley 9 at UofT Scarborough
+      - Created an OpenCV pipeline using Python Flask and Socket.io to fit virtual clothes onto users via live video feed
+      - Leveraged Cloudflare AI to suggest outfits based on the occasion, promoting sustainable fashion consumption.
+    skills:
+      - Python
+      - Flask
+      - Wolfram Alpha API
+      - OpenAI API
+      - Next.js
+      - Typescript
+  - title: QuakeGuard  
+    start_date: Jan 2024
+    end_date: Jan 2024
+    links:
+      github: https://github.com/adityarao2005/deltahacksX
+      devpost: https://devpost.com/software/quakeguard
+    details:
+      - Developed a virtual wardrobe and AI fashion advisor in 36 hours at Hack the Valley 9 at UofT Scarborough
+      - Created an OpenCV pipeline using Python Flask and Socket.io to fit virtual clothes onto users via live video feed
+      - Leveraged Cloudflare AI to suggest outfits based on the occasion, promoting sustainable fashion consumption.
+    skills:
+      - Python
+      - Flask
+      - Wolfram Alpha API
+      - OpenAI API
+      - Next.js
+      - Typescript
+extra_curriculars:
+  - position: Sys-Admin and Fullstack Developer Executive
+    organization: IEEE McMaster Student Branch
+    start_date: Nov 2024
+    end_date: Present
+    details:
+      - Set up an RPi 3B+ Cluster for a server to handle up to 100 clients in an instant with a budget of $5000
+      - Managed and provisioned a CI/CD pipeline which generates Docker images for our Kubernetes cluster
+      - Developing the website for the IEEE student branch and the admin dashboard for executives to manage
 skills:
   languages:
     - Java
