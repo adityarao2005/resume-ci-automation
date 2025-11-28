@@ -3,6 +3,11 @@ FROM pandoc/latex
 # Install Python3 and pip
 RUN apk add --no-cache python3 py3-pip
 
+
+# Install additional LaTeX packages
+RUN tlmgr update --self && \
+    tlmgr install preprint titlesec enumitem marvosym
+
 WORKDIR /app
 
 COPY pyproject.toml .
