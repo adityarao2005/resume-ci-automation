@@ -2,5 +2,6 @@ services:
   resume_ci_automation:
     build: .
     volumes:
-      - ./data:/app/data
+      - ./data:/app/data:ro
+      - ./templates:/app/templates:ro
       - ./out:/app/out

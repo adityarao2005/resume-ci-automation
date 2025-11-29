@@ -1,0 +1,39 @@
+name: Build Resume
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: Create output directory
+      run: mkdir -p out
+    
+    - name: Build and run Docker container
+      run: docker compose up --build
+    
+    - name: List output files
+      run: ls -la out/
+    
+    - name: Upload resume PDF as artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: resume-pdf
+        path: out/resume.pdf
+        retention-days: 90
+    
+    - name: Upload all outputs as artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: resume-artifacts
+        path: out/
+        retention-days: 90
