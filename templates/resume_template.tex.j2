@@ -19,6 +19,7 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \usepackage{fontawesome7}
+\usepackage[margin=2cm]{geometry}
 \input{glyphtounicode}
 
 %----------FONT OPTIONS----------
@@ -107,11 +108,11 @@
 
 \begin{center}
     \textbf{\Huge \scshape <VAR>name</VAR>} \\ \vspace{1pt}
-    \small \faPhone \quad <VAR>phone</VAR> $|$
-    \faEnvelope \quad \href{mailto:<VAR>email</VAR>}{\underline{<VAR>email</VAR>}} $|$ 
-    \faLinkedin \quad \href{https://linkedin.com/in/<VAR>linkedin</VAR>}{\underline{<VAR>linkedin</VAR>}} $|$
-    \faGithub \quad \href{https://github.com/<VAR>github</VAR>}{\underline{<VAR>github</VAR>}} $|$
-    \faGlobe \quad \href{<VAR>website</VAR>}{\underline{<VAR>website</VAR>}}
+    \small \faPhone \enspace <VAR>phone</VAR> $|$
+    \faEnvelope \enspace \href{mailto:<VAR>email</VAR>}{\underline{<VAR>email</VAR>}} $|$ 
+    \faLinkedin \enspace \href{https://linkedin.com/in/<VAR>linkedin</VAR>}{\underline{<VAR>linkedin</VAR>}} $|$
+    \faGithub \enspace \href{https://github.com/<VAR>github</VAR>}{\underline{<VAR>github</VAR>}} $|$
+    \faGlobe \enspace \href{<VAR>website</VAR>}{\underline{<VAR>website</VAR>}}
 \end{center}
 
 
@@ -154,7 +155,14 @@
     \resumeSubHeadingListStart
       <BLOCK>for proj in projects</BLOCK>
       \resumeProjectHeading
-          {\textbf{<VAR>proj.title | latex_escape</VAR>} $|$ \emph{<BLOCK>for skill in proj.skills</BLOCK><VAR>skill | latex_escape</VAR><BLOCK>if not loop.last</BLOCK>, <BLOCK>endif</BLOCK><BLOCK>endfor</BLOCK>}}{<VAR>proj.start_date</VAR> -- <VAR>proj.end_date</VAR>}
+          {\textbf{<VAR>proj.title | latex_escape</VAR>} $|$ 
+          <BLOCK>if proj.links and 'github' in proj.links</BLOCK>
+           \href{<VAR>proj.links.github</VAR>}{\faGithub}
+          <BLOCK>endif</BLOCK>
+          <BLOCK>if proj.links and 'website' in proj.links</BLOCK>
+           \href{<VAR>proj.links.website</VAR>}{\faGlobe}
+          <BLOCK>endif</BLOCK>
+           $|$ \emph{<BLOCK>for skill in proj.skills</BLOCK><VAR>skill | latex_escape</VAR><BLOCK>if not loop.last</BLOCK>, <BLOCK>endif</BLOCK><BLOCK>endfor</BLOCK>}}{<VAR>proj.start_date</VAR> -- <VAR>proj.end_date</VAR>}
           \resumeItemListStart
             <BLOCK>for detail in proj.details</BLOCK>
             \resumeItem{<VAR>detail | latex_escape</VAR>}
@@ -197,13 +205,13 @@
 
  %-----------Certifications-----------
 \section{Certifications}
-  <BLOCK>for cert in certifications</BLOCK>
   \resumeSubHeadingListStart
+  <BLOCK>for cert in certifications</BLOCK>
     \resumeSubheading
       {<VAR>cert.name | latex_escape</VAR>}{<VAR>cert.date | latex_escape</VAR>}
       {<VAR>cert.issuer | latex_escape</VAR>}{}
-  \resumeSubHeadingListEnd
   <BLOCK>endfor</BLOCK>
+  \resumeSubHeadingListEnd
 
 %-------------------------------------------
 \end{document}

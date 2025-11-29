@@ -78,11 +78,9 @@ projects:
       - Created coroutine abstractions, asynchronous runtimes, streams, and networking module abstractions to simplify cross platform C++ development.
       - Created CI/CD pipelines and unit testing using gtest, CTest, Vcpkg, and Github Actions to ensure code quality and reliability.
     skills:
-      - C++ 23
+      - C++
       - CMake
-      - CTest
       - Vcpkg
-      - Networking
       - Asynchronous Programming
       - Github Actions
   - title: Resume Builder
@@ -107,7 +105,7 @@ projects:
     end_date: Oct 2024
     links:
       github: https://github.com/robinrong1/intelligent-wardrobe/
-      devpost: https://devpost.com/software/fashionova
+      website: https://devpost.com/software/fashionova
     details:
       - Developed a virtual wardrobe and AI fashion advisor in 36 hours at Hack the Valley 9 at UofT Scarborough
       - Created an OpenCV pipeline using Python Flask and Socket.io to fit virtual clothes onto users via live video feed
@@ -125,7 +123,7 @@ projects:
     end_date: Oct 2024
     links:
       github: https://github.com/robinrong1/intelligent-wardrobe/
-      devpost: https://devpost.com/software/fashionova
+      website: https://devpost.com/software/fashionova
     details:
       - Developed a virtual wardrobe and AI fashion advisor in 36 hours at Hack the Valley 9 at UofT Scarborough
       - Created an OpenCV pipeline using Python Flask and Socket.io to fit virtual clothes onto users via live video feed
@@ -142,7 +140,7 @@ projects:
     end_date: Jan 2024
     links:
       github: https://github.com/adityarao2005/deltahacksX
-      devpost: https://devpost.com/software/quakeguard
+      website: https://devpost.com/software/quakeguard
     details:
       - Developed a virtual wardrobe and AI fashion advisor in 36 hours at Hack the Valley 9 at UofT Scarborough
       - Created an OpenCV pipeline using Python Flask and Socket.io to fit virtual clothes onto users via live video feed
@@ -176,15 +174,14 @@ skills:
     - Verilog
   frameworks:
     - Spring Boot
-    - Jakarta EE & MicroProfile
+    - Jakarta EE
+    - MicroProfile
     - Hibernate
     - Express
     - Next.js
     - FastAPI
     - Flask
     - UWP
-    - Django
-    - ASP.NET Core
   tools:
     - VS Code
     - Project Bob
@@ -196,10 +193,7 @@ skills:
     - Docker
     - OpenShift
     - Kubernetes
-    - Vercel
-    - MongoDB
-    - MySQL
-    - Unity
+    - Databases
   libraries:
     - Pandas
     - TensorFlow
