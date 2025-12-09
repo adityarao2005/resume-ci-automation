@@ -29,6 +29,8 @@ experiences:
     details:
       - Developing WebSphere Application Server v8.5.5, v9.0, WebSphere Liberty, and OpenLiberty and the tools which support development.
       - Modernizing tools based on legacy code and dependencies to modern dockerized applications.
+      - Improved UX, documentation, code query results (from 5 mins to less than 5 seconds), and developer experience in 4 internal tools.
+      - 
     skills:
       - Docker
       - Java
@@ -74,8 +76,8 @@ projects:
     links:
       github: https://github.com/adityarao2005/WebCraft
     details:
-      - Developed a networking and asynchronous programming library using C++ 23 features to allow for developers used to Node.js and Python to easily write C++ code.
-      - Created coroutine abstractions, asynchronous runtimes, streams, and networking module abstractions to simplify cross platform C++ development.
+      - Developed a networking and asynchronous programming library using C++ 23 features to allow for developers used to Node.js, Python, and Java to easily write fast and simple async C++ code.
+      - Created coroutine abstractions, asynchronous runtimes, streams, and networking module abstractions over low level OS specific async library code to simplify cross platform C++ development.
       - Created CI/CD pipelines and unit testing using gtest, CTest, Vcpkg, and Github Actions to ensure code quality and reliability.
     skills:
       - C++
@@ -142,16 +144,17 @@ projects:
       github: https://github.com/adityarao2005/deltahacksX
       website: https://devpost.com/software/quakeguard
     details:
-      - Developed a virtual wardrobe and AI fashion advisor in 36 hours at Hack the Valley 9 at UofT Scarborough
-      - Created an OpenCV pipeline using Python Flask and Socket.io to fit virtual clothes onto users via live video feed
-      - Leveraged Cloudflare AI to suggest outfits based on the occasion, promoting sustainable fashion consumption.
+      - Developed an earthquake prediction tool using ML models showcased at DeltaHacks X and GDSC McMaster
+      - Visualized global earthquake data and high-risk areas with Next.js and Python, Flask, SciKit Learn, and TensorFlow
     skills:
-      - Python
-      - Flask
-      - Wolfram Alpha API
-      - OpenAI API
       - Next.js
+      - Flask
       - Typescript
+      - Python
+      - TensorFlow
+      - Keras
+      - SciKit Learn
+      - Pandas
 extra_curriculars:
   - position: Sys-Admin and Fullstack Developer Executive
     organization: IEEE McMaster Student Branch
