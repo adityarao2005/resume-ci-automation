@@ -28,9 +28,9 @@ experiences:
     location: Markham, ON
     details:
       - Developing WebSphere Application Server v8.5.5, v9.0, WebSphere Liberty, and OpenLiberty and the tools which support development.
-      - Modernizing tools based on legacy code and dependencies to modern dockerized applications.
-      - Improved UX, documentation, code query results (from 5 mins to less than 5 seconds), and developer experience in 4 internal tools.
-      - 
+      - Re-engineered a suite of 4 internal legacy tools from scratch, modernizing the UX, standardizing Docker deployments, and establishing the first Unit/Integration testing pipelines to eliminate manual verification
+      - Optimized the core data processing tool within this suite, replacing heavy framework overhead with custom API wrappers to reduce execution time by 99% (from 10 mins to <4 secs).
+      - Refactored the critical Product Installation Verification Suite, migrating 20+ legacy FAT tests to a unified framework which enhanced debuggability and system reliability.
     skills:
       - Docker
       - Java
