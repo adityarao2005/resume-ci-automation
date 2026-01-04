@@ -30,3 +30,30 @@ jobs:
         name: resume.pdf
         path: out/resume.pdf
         retention-days: 90
+        
+    - name: Publish resume PDF to separate repo
+      env:
+        TARGET_REPO: adityarao2005/resume
+        BRANCH_NAME: ${{ github.ref_name }}
+        GIT_SHA: ${{ github.sha }}
+        GH_TOKEN: ${{ secrets.RESUME_REPO_GH_PAT }}
+      run: |
+        set -e
+        git config --global user.name "resume-bot"
+        git config --global user.email "resume-bot@users.noreply.github.com"
+
+        git clone https://x-access-token:${GH_TOKEN}@github.com/${TARGET_REPO}.git published
+        cd published
+
+        git checkout "${BRANCH_NAME}" || git checkout -b "${BRANCH_NAME}"
+
+        cp ../out/resume.pdf .
+
+        if git diff --quiet resume.pdf; then
+          echo "No changes to resume.pdf; skipping commit."
+          exit 0
+        fi
+
+        git add resume.pdf
+        git commit -m "Update resume.pdf from ${GIT_SHA}"
+        git push origin "${BRANCH_NAME}"
