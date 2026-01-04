@@ -28,7 +28,7 @@ experiences:
     location: Markham, ON
     details:
       - Developing WebSphere Application Server v8.5.5, v9.0, WebSphere Liberty, and OpenLiberty and the tools which support development.
-      - Re-engineered a suite of 4 internal legacy tools from scratch, modernizing the UX, standardizing Docker deployments, and establishing the first Unit/Integration testing pipelines to eliminate manual verification
+      - Re-engineered a suite of 4 internal legacy tools from scratch, modernizing the UX, standardizing Docker deployments, and establishing the first Unit/Integration testing pipelines to eliminate manual verification.
       - Optimized the core data processing tool within this suite, replacing heavy framework overhead with custom API wrappers to reduce execution time by 99% (from 10 mins to <4 secs).
       - Refactored the critical Product Installation Verification Suite, migrating 20+ legacy FAT tests to a unified framework which enhanced debuggability and system reliability.
     skills:
@@ -76,9 +76,10 @@ projects:
     links:
       github: https://github.com/adityarao2005/WebCraft
     details:
-      - Developed a networking and asynchronous programming library using C++ 23 features to allow for developers used to Node.js, Python, and Java to easily write fast and simple async C++ code.
-      - Created coroutine abstractions, asynchronous runtimes, streams, and networking module abstractions over low level OS specific async library code to simplify cross platform C++ development.
-      - Created CI/CD pipelines and unit testing using gtest, CTest, Vcpkg, and Github Actions to ensure code quality and reliability.
+      - Developed an asynchronous runtime and programming library using C++ 23 features to allow developers who are used to Node.js, Python, and Java to write fast and simple async C++ code easily.
+      - Created coroutine abstractions, the async runtime, async streams, file and networking module abstractions over low level OS specific async library code to simplify cross-platform C++ development.
+      - Created CI/CD pipelines and created over 130+ tests to verify correctness using gtest, CTest, Vcpkg, and Github Actions to ensure code quality and reliability.
+      - Created a vcpkg port so developers can easily access it.
     skills:
       - C++
       - CMake
@@ -187,7 +188,7 @@ skills:
     - UWP
   tools:
     - VS Code
-    - Project Bob
+    - IBM Bob
     - Eclipse
     - AWS
     - GCP
@@ -215,9 +216,24 @@ skills:
     - Swimming
     - Chess
 certifications:
-  - name: AWS Certified Cloud Practitioner
+  - name: "Clean Code"
     issuer: Udemy
-    date: May 2024
-  - name: "Docker & Kubernetes: The Complete Guide"
+    date: September 2025
+  - name: "IBM Agile Explorer"
+    issuer: IBM
+    date: September 2025
+  - name: "The DevOps Essentials - The Handbook"
     issuer: Udemy
-    date: June 2024
+    date: September 2025
+  - name: "Introduction to Containers, Kubernetes, and OpenShift"
+    issuer: IBM
+    date: August 2025
+  - name: "Practical OpenShift for Developers - OpenShift 4"
+    issuer: Udemy
+    date: August 2025
+  - name: "[NEW] Ultimate AWS Certified Cloud Practitioner CLF-C02 2025"
+    issuer: Udemy
+    date: February 2025
+  - name: "Docker & Kubernetes: The Practical Guide [2025 Edition]"
+    issuer: Udemy
+    date: January 2025
