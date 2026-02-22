@@ -32,6 +32,7 @@ experiences:
       - Optimized the core data processing tool within this suite, replacing heavy framework overhead with custom API wrappers to reduce execution time by 99% (from 10 mins to <4 secs).
       - Refactored the critical Product Installation Verification Suite, migrating 20+ legacy FAT tests to a unified framework which enhanced debuggability and system reliability.
       - Diagnosed and solved >50 build breaks and supported the development team in diagnosing customer cases and build breaks on all platforms, including but not limited to Linux, Windows, MacOS, IBM i, and zOS
+      - Created E2E tests for deploying Liberty on OCP (Kubernetes) and verifying behavior along with using third-party software such as Infinispan, Keycloak, and Kafka.
     skills:
       - Docker
       - Java
