@@ -8,4 +8,10 @@ Want to run it locally? Modify the `data/resume.yaml` and `templates/resume_temp
 docker compose up --build
 ```
 
+If you want a standalone watcher loop while you iterate locally, run:
+```
+uv run python -m resume_ci_automation.watch_resume
+```
+It will generate the PDF once, then keep watching `data/resume.yaml` and `templates/resume_template.tex.j2`, regenerate after a short debounce, and exit cleanly with `q` or `Ctrl-C`.
+
 Want to have it automated? Already built in, clone & push or fork the repository, modify the `data/resume.yaml` and `templates/resume_template.tex.j2` then push your commits to your repository on GH Actions and watch as GH Actions builds the resume for you in the build artifacts.

@@ -2,7 +2,18 @@ import subprocess
 import os
 import shutil
 from pathlib import Path
-from latex_generator import generate_latex_resume
+
+
+PACKAGE_DIR = Path(__file__).resolve().parent
+SRC_DIR = PACKAGE_DIR.parent
+PROJECT_ROOT = SRC_DIR.parent
+
+if __package__ in {None, ""}:
+    if str(SRC_DIR) not in sys.path:
+        sys.path.insert(0, str(SRC_DIR))
+    from resume_ci_automation.latex_generator import generate_latex_resume
+else:
+    from .latex_generator import generate_latex_resume
 
 def generate_pdf():
     output = generate_latex_resume()

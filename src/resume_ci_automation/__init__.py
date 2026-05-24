@@ -1,0 +1,1 @@
+"""Resume CI Automation package."""
