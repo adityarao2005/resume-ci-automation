@@ -34,6 +34,7 @@ experiences:
       - Refactored the critical Product Installation Verification Suite, migrating 20+ legacy FAT tests to a unified framework which enhanced debuggability and system reliability.
       - Diagnosed and solved >50 build breaks and supported the development team in diagnosing customer cases and build breaks on all platforms, including but not limited to Linux, Windows, MacOS, IBM i, and zOS
       - Created E2E tests for deploying Liberty on OCP (Kubernetes) and verifying behavior along with using third-party software such as Infinispan, Keycloak, and Kafka.
+      - Created an AI Agent leveraging IBM Bob Shell to analyze build breaks given the build break issue and description, build break logs and server configuration, OpenLiberty and WebSphere Liberty source code reducing time spent on fixing build breaks by at least 2 days worth of analysis.
     skills:
       - Docker
       - Java
