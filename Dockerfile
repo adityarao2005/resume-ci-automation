@@ -45,4 +45,4 @@ ENV PATH="/app/.venv/bin:$PATH"
 ENTRYPOINT []
 
 # Run the resume CI automation tool
-CMD ["python3", "-m", "src.resume_ci_automation"]
+CMD ["uv", "run", "src/resume_ci_automation"]
