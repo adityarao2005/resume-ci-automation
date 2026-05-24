@@ -1,22 +1,48 @@
-FROM pandoc/latex
+# Use a Python image with uv pre-installed
+FROM ghcr.io/astral-sh/uv:python3.11-bookworm-slim
 
-# Install Python3 and pip
-RUN apk add --no-cache python3 py3-pip
+# Install LaTeX dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    texlive-latex-base \
+        texlive-xetex \
+        texlive-fonts-recommended \
+        texlive-fonts-extra \
+        texlive-latex-extra \
+        texlive-lang-english \
+    && rm -rf /var/lib/apt/lists/*
 
-
-# Install additional LaTeX packages
-RUN tlmgr update --self && \
-    tlmgr install preprint titlesec enumitem marvosym fontawesome7
-
+# Install the project into `/app`
 WORKDIR /app
 
-COPY pyproject.toml .
+# Enable bytecode compilation
+ENV UV_COMPILE_BYTECODE=1
 
-RUN python3 -m venv venv
-ENV PATH="/app/venv/bin:$PATH"
-RUN pip3 install --no-cache-dir pdm-backend
-RUN pip3 install --no-cache-dir .
+# Copy from the cache instead of linking since it's a mounted volume
+ENV UV_LINK_MODE=copy
 
-COPY src/ ./src/
+# Omit development dependencies
+ENV UV_NO_DEV=1
 
-ENTRYPOINT ["python3", "-m", "src.resume_ci_automation"]
+# Ensure installed tools can be executed out of the box
+ENV UV_TOOL_BIN_DIR=/usr/local/bin
+
+# Install the project's dependencies using the lockfile and settings
+RUN --mount=type=cache,target=/root/.cache/uv \
+    --mount=type=bind,source=uv.lock,target=uv.lock \
+    --mount=type=bind,source=pyproject.toml,target=pyproject.toml \
+    uv sync --locked --no-install-project
+
+# Then, add the rest of the project source code and install it
+# Installing separately from its dependencies allows optimal layer caching
+COPY . /app
+RUN --mount=type=cache,target=/root/.cache/uv \
+    uv sync --locked
+
+# Place executables in the environment at the front of the path
+ENV PATH="/app/.venv/bin:$PATH"
+
+# Reset the entrypoint, don't invoke `uv`
+ENTRYPOINT []
+
+# Run the resume CI automation tool
+CMD ["python3", "-m", "src.resume_ci_automation"]
