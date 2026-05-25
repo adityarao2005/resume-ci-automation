@@ -2,9 +2,9 @@ name: Build Resume
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [ main, master, cv ]
   pull_request:
-    branches: [ main, master ]
+    branches: [ main, master, cv ]
   workflow_dispatch:  # Allow manual trigger
 
 jobs:
