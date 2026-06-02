@@ -128,24 +128,6 @@ projects:
       - OpenCV
       - Cloudflare AI
       - Flask
-  - title: Smart Study Buddy 
-    start_date: Oct 2024
-    end_date: Oct 2024
-    links:
-      github: https://github.com/adityarao2005/smart-study-buddy
-      website: https://devpost.com/software/study-buddy-75yde3
-    details:
-      - Developed an intelligent chatbot capable of summarizing course materials and answering academic queries.
-      - Integrated OpenAI API for natural language processing to provide general question-answering capabilities.
-      - Utilized Wolfram Alpha API to handle scientific and computational queries, offering detailed responses.
-      - Built a feature to generate practice problems based on course material and enhance learning using Python and Flask.
-    skills:
-      - Python
-      - Flask
-      - Wolfram Alpha API
-      - OpenAI API
-      - Next.js
-      - Typescript
   - title: QuakeGuard  
     start_date: Jan 2024
     end_date: Jan 2024
