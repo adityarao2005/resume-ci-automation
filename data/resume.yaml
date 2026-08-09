@@ -27,15 +27,14 @@ experiences:
     end_date: Aug 2026
     location: Markham, ON
     details:
-      - Developing WebSphere Application Server v8.5.5, v9.0, WebSphere Liberty, and OpenLiberty and the public and internal tools which support development.
-      - Re-engineered a suite of 4 internal legacy tools from scratch, modernizing the UX, standardizing Docker deployments, and establishing the first Unit/Integration testing pipelines to eliminate manual verification.
-      - Created a tool used by over 400+ developers and managers which allows developers to record the distribution of their work they perform and allow managers to record it and use the data to assist the developers by allocating resources in their worflows.
+      - Developed features and L3 Support tools for WebSphere Application Server, WebSphere Liberty, and OpenLiberty.
+      - Modernized the L3 Support tools to use the latest cutting edge technologies and UI/UX, standardizing Docker deployments, and establishing Unit/Integration testing pipelines to eliminate manual verification.
+      - Built an internal tool to track work distribution of developers, used by 400+ developers and managers to assist in allocating resources in their workflows.
       - Optimized the core data processing tool within this suite, replacing heavy framework overhead with custom API wrappers to reduce execution time by 99% (from 10 mins to <4 secs).
-      - Refactored the critical Product Installation Verification Suite, migrating 20+ legacy FAT tests to a unified framework which enhanced debuggability and system reliability.
-      - Diagnosed and solved >50 build breaks and supported the development team in diagnosing customer cases and build breaks on all platforms, including but not limited to Linux, Windows, MacOS, IBM i, and zOS
-      - Created E2E tests for deploying Liberty on OCP (Kubernetes) and verifying behavior along with using third-party software such as Infinispan, Keycloak, and Kafka.
-      - Created an AI Agent leveraging IBM Bob Shell to analyze build breaks given the build break issue and description, build break logs and server configuration, OpenLiberty and WebSphere Liberty source code reducing time spent on fixing build breaks by at least 2 days worth of analysis.
-      - Successfully completed an 8 year migration of L3 Support internal tools from legacy mainframe based defect tracking software to modern RESTful Salesforce CSP ticketing software.
+      - Refactored 20+ legacy FAT tests to JUnit based runners enhancing maintainability and proper tracing on failures.
+      - Diagnosed and solved 50+ build breaks and supported the development team in diagnosing and resolving customer cases on all platforms, including but not limited to Linux, Windows, MacOS, IBM i, and zOS
+      - Created an AI Agent leveraging IBM Bob Shell to analyze build breaks using build logs, error details, and source code, reducing time spent by 2 days worth of analysis per incident.
+      - Successfully migrated all L3 Support tools from legacy mainframe based defect tracking software to modern RESTful Salesforce CSP ticketing software over 8 years.
     skills:
       - Docker
       - Java
