@@ -15,11 +15,10 @@ education:
     courses:
       - Digital Systems
       - OOP
-      - Discrete Math I & II
-      - Intro to Software Design
+      - Discrete Math
+      - Software Design
       - DSA
       - Computer Architecture
-      - Software Development Basics
 experiences:
   - title: Software Developer Intern
     company: IBM
@@ -27,14 +26,11 @@ experiences:
     end_date: Aug 2026
     location: Markham, ON
     details:
-      - Developed features and L3 Support tools for WebSphere Application Server, WebSphere Liberty, and OpenLiberty.
-      - Modernized the L3 Support tools to use the latest cutting edge technologies and UI/UX, standardizing Docker deployments, and establishing Unit/Integration testing pipelines to eliminate manual verification.
-      - Built an internal tool to track work distribution of developers, used by 400+ developers and managers to assist in allocating resources in their workflows.
-      - Optimized the core data processing tool within this suite, replacing heavy framework overhead with custom API wrappers to reduce execution time by 99% (from 10 mins to <4 secs).
-      - Refactored 20+ legacy FAT tests to JUnit based runners enhancing maintainability and proper tracing on failures.
-      - Diagnosed and solved 50+ build breaks and supported the development team in diagnosing and resolving customer cases on all platforms, including but not limited to Linux, Windows, MacOS, IBM i, and zOS
-      - Created an AI Agent leveraging IBM Bob Shell to analyze build breaks using build logs, error details, and source code, reducing time spent by 2 days worth of analysis per incident.
-      - Successfully migrated all L3 Support tools from legacy mainframe based defect tracking software to modern RESTful Salesforce CSP ticketing software over 8 years.
+      - Built an AI diagnostic platform using IBM Bob to triage Liberty build breaks with 99% accuracy across 100 test failures, reducing incident investigation time by 2 days per break.
+      - Led modernization of legacy L3 tools (Retain mainframe, EJB/Servlets, Ruby) to React, Spring Boot, Quarkus, and MicroProfile REST microservices, completing a multi-year Salesforce CSP migration.
+      - Architected an L3 work-distribution analytics app for 400+ developers to track engineering time across CVEs, features, and QA, replacing shared spreadsheets to save 2 days/week of overhead.
+      - Accelerated CI/CD reliability for WebSphere Application Server by refactoring 20+ legacy FAT test suites into modular JUnit frameworks.
+      - Diagnosed 50+ multi-platform build failures across Linux, macOS, Windows, and z/OS while maintaining core WebSphere Application Server, WebSphere Liberty, and OpenLiberty runtimes.
     skills:
       - Docker
       - Java
@@ -65,7 +61,8 @@ experiences:
     location: Hamilton, ON
     details:
       - Developed and maintained React and TypeScript code for Medium AI, contributing to 2 first-place and 1 second-place finishes in the McMaster Startup Survivor competition, and helping secure $10,000 in funding.
-      - Implemented real-time speech transcription using Python, OpenAI Whisper, FFmpeg, and Socket.IO
+      - Developed real-time doctor-patient voice-based transcription with gRPC and Firebase, achieving sub-500ms streaming latency by load balancing OpenAI Whisper across self-hosted and managed instances.
+      - Developed AI diagnostic hooks to analyze transcripts, highlighting clinical insights for attending physicians.
     skills:
       - React
       - Linux
@@ -76,6 +73,7 @@ experiences:
       - FFmpeg
       - Socket.IO
       - Web APIs
+      - Firebase
 projects:
   - title: WebCraft
     start_date: Apr 2025
@@ -83,10 +81,8 @@ projects:
     links:
       github: https://github.com/adityarao2005/WebCraft
     details:
-      - Developed an asynchronous runtime and programming library using C++ 23 features to allow developers who are used to Node.js, Python, and Java to write fast and simple async C++ code easily.
-      - Created coroutine abstractions, the async runtime, async streams, file and networking module abstractions over low level OS specific async library code to simplify cross-platform C++ development.
-      - Created CI/CD pipelines and created over 130+ tests to verify correctness using gtest, CTest, Vcpkg, and Github Actions to ensure code quality and reliability.
-      - Created a vcpkg port so developers can easily access it.
+      - Engineered an asynchronous programming library in C++ 23, featuring coroutine-based task management, concurrent streams, and high-performance networking/file I/O modules to simplify cross-platform async development.
+      - Automated testing and release workflows using gtest (130+ tests), GitHub Actions CI/CD, and published a custom vcpkg port for standardized cross-platform distribution.
     skills:
       - C++
       - CMake
@@ -99,8 +95,8 @@ projects:
     links:
       github: https://github.com/adityarao2005/resume-builder
     details:
-      - Developed an AI-powered resume builder for automated resume creation, scoring, and real-time editing.
-      - Improved resume management by reducing manual effort in tailoring resumes for job applications.
+      - Built an AI-powered resume builder with Next.js, Spring Boot, and FastAPI for real-time editing and version control.
+      - Integrated LangChain to automate ATS keyword optimization, intelligent scoring, and template tailoring.
     skills:
       - Java
       - Spring Boot
@@ -117,9 +113,8 @@ projects:
       github: https://github.com/robinrong1/intelligent-wardrobe/
       website: https://devpost.com/software/fashionova
     details:
-      - Developed a virtual wardrobe and AI fashion advisor in 36 hours at Hack the Valley 9 at UofT Scarborough
-      - Created an OpenCV pipeline using Python Flask and Socket.io to fit virtual clothes onto users via live video feed
-      - Leveraged Cloudflare AI to suggest outfits based on the occasion, promoting sustainable fashion consumption.
+      - Built a virtual wardrobe & AI fashion advisor in 36 hours at Hack the Valley 9 (UofT Scarborough).
+      - Developed an OpenCV, Flask, and Socket.io pipeline for video clothing overlays with Cloudflare AI outfit suggestions.
     skills:
       - Typescript
       - Next.js
@@ -128,24 +123,6 @@ projects:
       - OpenCV
       - Cloudflare AI
       - Flask
-  - title: QuakeGuard  
-    start_date: Jan 2024
-    end_date: Jan 2024
-    links:
-      github: https://github.com/adityarao2005/deltahacksX
-      website: https://devpost.com/software/quakeguard
-    details:
-      - Developed an earthquake prediction tool using ML models showcased at DeltaHacks X and GDSC McMaster
-      - Visualized global earthquake data and high-risk areas with Next.js and Python, Flask, SciKit Learn, and TensorFlow
-    skills:
-      - Next.js
-      - Flask
-      - Typescript
-      - Python
-      - TensorFlow
-      - Keras
-      - SciKit Learn
-      - Pandas
 extra_curriculars:
   - position: Sys-Admin and Fullstack Developer Executive
     organization: IEEE McMaster Student Branch
@@ -159,12 +136,12 @@ extra_curriculars:
 skills:
   languages:
     - Java
-    - Python
-    - SQL
-    - .NET Framework
-    - C
-    - C++
     - JavaScript/TypeScript
+    - Python
+    - C#
+    - C++
+    - SQL
+    - C
     - Verilog
   frameworks:
     - Spring Boot
@@ -177,18 +154,14 @@ skills:
     - Flask
     - UWP
   tools:
-    - VS Code
-    - IBM Bob
-    - Eclipse
     - AWS
     - GCP
     - Git
-    - Github
     - Docker
     - OpenShift
     - Kubernetes
-    - Databases
     - Infinispan
+    - IBM Bob
   libraries:
     - Pandas
     - TensorFlow
@@ -199,26 +172,7 @@ skills:
     - JQuery
     - React
     - Mongoose
-  hobbies:
-    - Sketching
-    - Painting
-    - Violin (Western and Carnatic)
-    - Badminton
-    - Swimming
-    - Chess
 certifications:
-  - name: "Clean Code"
-    issuer: Udemy
-    date: September 2025
-  - name: "IBM Agile Explorer"
-    issuer: IBM
-    date: September 2025
-  - name: "The DevOps Essentials - The Handbook"
-    issuer: Udemy
-    date: September 2025
-  - name: "Introduction to Containers, Kubernetes, and OpenShift"
-    issuer: IBM
-    date: August 2025
   - name: "Practical OpenShift for Developers - OpenShift 4"
     issuer: Udemy
     date: August 2025
