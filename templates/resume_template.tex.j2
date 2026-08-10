@@ -44,8 +44,8 @@
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
 
 \urlstyle{same}
 
@@ -55,8 +55,8 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
@@ -95,9 +95,9 @@
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
@@ -193,25 +193,27 @@
 %
 %-----------PROGRAMMING SKILLS-----------
 \section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
+ \begin{itemize}[leftmargin=0.0in, label={}]
     \small{\item{
         \textbf{Languages}{: <BLOCK>for item in skills.languages</BLOCK><VAR>item | latex_escape</VAR><BLOCK>if not loop.last</BLOCK>, <BLOCK>endif</BLOCK><BLOCK>endfor</BLOCK>} \\
         \textbf{Frameworks}{: <BLOCK>for item in skills.frameworks</BLOCK><VAR>item | latex_escape</VAR><BLOCK>if not loop.last</BLOCK>, <BLOCK>endif</BLOCK><BLOCK>endfor</BLOCK>} \\
         \textbf{Developer Tools}{: <BLOCK>for item in skills.tools</BLOCK><VAR>item | latex_escape</VAR><BLOCK>if not loop.last</BLOCK>, <BLOCK>endif</BLOCK><BLOCK>endfor</BLOCK>} \\
         \textbf{Libraries}{: <BLOCK>for item in skills.libraries</BLOCK><VAR>item | latex_escape</VAR><BLOCK>if not loop.last</BLOCK>, <BLOCK>endif</BLOCK><BLOCK>endfor</BLOCK>} \\
-        \textbf{Hobbies}{: <BLOCK>for item in skills.hobbies</BLOCK><VAR>item | latex_escape</VAR><BLOCK>if not loop.last</BLOCK>, <BLOCK>endif</BLOCK><BLOCK>endfor</BLOCK>} \\
+        <BLOCK>if skills.hobbies</BLOCK>
+          \textbf{Hobbies}{: <BLOCK>for item in skills.hobbies</BLOCK><VAR>item | latex_escape</VAR><BLOCK>if not loop.last</BLOCK>, <BLOCK>endif</BLOCK><BLOCK>endfor</BLOCK>} \\
+        <BLOCK>endif</BLOCK>
     }}
  \end{itemize}
 
  %-----------Certifications-----------
 \section{Certifications}
-  \resumeSubHeadingListStart
-  <BLOCK>for cert in certifications</BLOCK>
-    \resumeSubheading
-      {<VAR>cert.name | latex_escape</VAR>}{<VAR>cert.date | latex_escape</VAR>}
-      {<VAR>cert.issuer | latex_escape</VAR>}{}
-  <BLOCK>endfor</BLOCK>
-  \resumeSubHeadingListEnd
+  \begin{itemize}[leftmargin=0.0in, label={}]
+    \small{\item{
+    <BLOCK>for cert in certifications</BLOCK>
+      \textbf{<VAR>cert.name | latex_escape</VAR>} -- \textit{<VAR>cert.issuer | latex_escape</VAR>} \hfill \textit{<VAR>cert.date | latex_escape</VAR>}<BLOCK>if not loop.last</BLOCK> \\ <BLOCK>endif</BLOCK>
+    <BLOCK>endfor</BLOCK>
+    }}
+  \end{itemize}
 
 %-------------------------------------------
 \end{document}
