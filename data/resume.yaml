@@ -28,9 +28,9 @@ experiences:
     details:
       - Built an AI diagnostic platform using IBM Bob to triage Liberty build breaks with 99% accuracy across 100 test failures, reducing incident investigation time by 2 days per break.
       - Led modernization of legacy L3 tools (Retain mainframe, EJB/Servlets, Ruby) to React, Spring Boot, Quarkus, and MicroProfile REST microservices, completing a multi-year Salesforce CSP migration.
-      - Architected an L3 work-distribution analytics app for 400+ developers to track engineering time across CVEs, features, and QA, replacing shared spreadsheets to save 2 days/week of overhead.
-      - Accelerated CI/CD reliability for WebSphere Application Server by refactoring 20+ legacy FAT test suites into modular JUnit frameworks.
-      - Diagnosed 50+ multi-platform build failures across Linux, macOS, Windows, and z/OS while maintaining core WebSphere Application Server, WebSphere Liberty, and OpenLiberty runtimes.
+      - Architected an L3 work-distribution analytics app for 400+ developers to track engineering time across CVEs, features, and QA, replacing shared spreadsheets to save 1 day a week of overhead per manager.
+      - Accelerated WebSphere CI/CD reliability by refactoring 20+ legacy FAT test suites into modular JUnit frameworks.
+      - Diagnosed 50+ multi-platform build failures across Linux, macOS, Windows, and z/OS while maintaining core WebSphere Application Server, WebSphere Liberty, and an open source developer of OpenLiberty.
     skills:
       - Docker
       - Java
@@ -81,7 +81,7 @@ projects:
     links:
       github: https://github.com/adityarao2005/WebCraft
     details:
-      - Engineered an asynchronous programming library in C++ 23, featuring coroutine-based task management, concurrent streams, and high-performance networking/file I/O modules to simplify cross-platform async development.
+      - Engineered an asynchronous programming library in C++ 23, featuring coroutine-based task management, concurrent streams, and high-performance networking/file I/O modules to simplify cross-platform async development for C++ developers.
       - Automated testing and release workflows using gtest (130+ tests), GitHub Actions CI/CD, and published a custom vcpkg port for standardized cross-platform distribution.
     skills:
       - C++
@@ -97,7 +97,7 @@ projects:
     details:
       - Built an AI-powered resume builder with Next.js, Spring Boot, and FastAPI for real-time editing and version control.
       - Integrated LangChain to automate ATS keyword optimization, intelligent scoring, and template tailoring.
-      - Reduced manual resume tailoring time from ~2 hours to <10 minutes in internal testing
+      - Accelerated resume tailoring workflow by ~90%, cutting manual editing time from ~2 hours to <10 minutes per application.
     skills:
       - Java
       - Spring Boot
