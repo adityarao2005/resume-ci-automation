@@ -30,7 +30,7 @@ experiences:
       - Led modernization of legacy L3 tools (Retain mainframe, EJB/Servlets, Ruby) to React, Spring Boot, Quarkus, and MicroProfile REST microservices, completing a multi-year Salesforce CSP migration.
       - Architected an L3 work-distribution analytics app for 400+ developers to track engineering time across CVEs, features, and QA, replacing shared spreadsheets to save 1 day a week of overhead per manager.
       - Accelerated WebSphere CI/CD reliability by refactoring 20+ legacy FAT test suites into modular JUnit frameworks.
-      - Diagnosed 50+ multi-platform build failures across Linux, macOS, Windows, and z/OS while maintaining core WebSphere Application Server, WebSphere Liberty, and an open source developer of OpenLiberty.
+      - Diagnosed 50+ multi-platform build failures across Linux, macOS, Windows, and z/OS while maintaining core WebSphere Application Server, WebSphere Liberty, and contributing to OpenLiberty as an open source developer.
     skills:
       - Docker
       - Java
@@ -131,7 +131,7 @@ extra_curriculars:
     end_date: Present
     location: Hamilton, ON
     details:
-      - Set up an RPi 3B+ Cluster for a server to handling up to 100 concurrent clients with <50ms response time
+      - Set up an RPi 3B+ Cluster to handle up to 100 concurrent clients with <50ms response time
       - Managed and provisioned a CI/CD pipeline which generates Docker images for our Kubernetes cluster
       - Developed IEEE McMaster student branch website using Next.js, leveraging GitHub Projects and Issues as the admin dashboard for managing events and member contributions
 skills:
