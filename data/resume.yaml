@@ -61,8 +61,8 @@ experiences:
     location: Hamilton, ON
     details:
       - Developed and maintained React and TypeScript code for Medium AI, contributing to 2 first-place and 1 second-place finishes in the McMaster Startup Survivor competition, and helping secure $10,000 in funding.
-      - Developed real-time doctor-patient voice-based transcription with gRPC and Firebase, achieving sub-500ms streaming latency by load balancing OpenAI Whisper across self-hosted and managed instances.
-      - Developed AI diagnostic hooks to analyze transcripts, highlighting clinical insights for attending physicians.
+      - Engineered real-time doctor-patient voice-based transcription with gRPC and Firebase, achieving sub-500ms streaming latency by load balancing OpenAI Whisper across self-hosted and managed instances.
+      - Integrated AI diagnostic hooks to analyze transcripts, highlighting clinical insights for attending physicians.
     skills:
       - React
       - Linux
@@ -97,6 +97,7 @@ projects:
     details:
       - Built an AI-powered resume builder with Next.js, Spring Boot, and FastAPI for real-time editing and version control.
       - Integrated LangChain to automate ATS keyword optimization, intelligent scoring, and template tailoring.
+      - Reduced manual resume tailoring time from ~2 hours to <10 minutes in internal testing
     skills:
       - Java
       - Spring Boot
@@ -130,9 +131,9 @@ extra_curriculars:
     end_date: Present
     location: Hamilton, ON
     details:
-      - Set up an RPi 3B+ Cluster for a server to handle up to 100 clients in an instant with a budget of $5000
+      - Set up an RPi 3B+ Cluster for a server to handling up to 100 concurrent clients with <50ms response time
       - Managed and provisioned a CI/CD pipeline which generates Docker images for our Kubernetes cluster
-      - Developing the website for the IEEE student branch and the admin dashboard for executives to manage
+      - Developed IEEE McMaster student branch website using Next.js, leveraging GitHub Projects and Issues as the admin dashboard for managing events and member contributions
 skills:
   languages:
     - Java
@@ -172,13 +173,3 @@ skills:
     - JQuery
     - React
     - Mongoose
-certifications:
-  - name: "Practical OpenShift for Developers - OpenShift 4"
-    issuer: Udemy
-    date: August 2025
-  - name: "[NEW] Ultimate AWS Certified Cloud Practitioner CLF-C02 2025"
-    issuer: Udemy
-    date: February 2025
-  - name: "Docker & Kubernetes: The Practical Guide [2025 Edition]"
-    issuer: Udemy
-    date: January 2025
