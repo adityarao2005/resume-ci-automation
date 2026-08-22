@@ -27,8 +27,8 @@ experiences:
     location: Markham, ON
     details:
       - Built an AI diagnostic platform using IBM Bob to triage Liberty build breaks with 99% accuracy across 100 test failures, reducing incident investigation time by 2 days per break.
-      - Led modernization of legacy L3 tools (Retain mainframe, EJB/Servlets, Ruby) to React, Spring Boot, Quarkus, and MicroProfile REST microservices, completing a multi-year Salesforce CSP migration.
-      - Architected an L3 work-distribution analytics app for 400+ developers to track engineering time across CVEs, features, and QA, replacing shared spreadsheets to save 1 day a week of overhead per manager.
+      - Led modernization of legacy engineering support tools (EJB/Servlets, Ruby on Rails) to React, Spring Boot, Quarkus, and OpenLiberty microservices, completing a multi-year migration of mainframe based ticketing system to Salesforce.
+      - Architected a work-distribution analytics app for 400+ developers to track engineering time across CVEs, features, and QA, replacing shared spreadsheets to save 1 day a week of overhead per manager.
       - Accelerated WebSphere CI/CD reliability by refactoring 20+ legacy FAT test suites into modular JUnit frameworks.
       - Diagnosed 50+ multi-platform build failures across Linux, macOS, Windows, and z/OS while maintaining core WebSphere Application Server, WebSphere Liberty, and contributing to OpenLiberty as an open source developer.
     skills:
@@ -60,9 +60,9 @@ experiences:
     end_date: Aug 2024
     location: Hamilton, ON
     details:
-      - Developed and maintained React and TypeScript code for Medium AI, contributing to 2 first-place and 1 second-place finishes in the McMaster Startup Survivor competition, and helping secure $10,000 in funding.
       - Engineered real-time doctor-patient voice-based transcription with gRPC and Firebase, achieving sub-500ms streaming latency by load balancing OpenAI Whisper across self-hosted and managed instances.
       - Integrated AI diagnostic hooks to analyze transcripts, highlighting clinical insights for attending physicians.
+      - Developed and maintained React and TypeScript website frontend for Medium AI, contributing to 2 first-place and 1 second-place finishes in the McMaster Startup Survivor competition, and helping secure $10,000 in funding.
     skills:
       - React
       - Linux
@@ -75,6 +75,21 @@ experiences:
       - Web APIs
       - Firebase
 projects:
+  - title: BYoAI Deployment Platform
+    start_date: May 2026
+    end_date: Present
+    links:
+      github: https://github.com/adityarao2005/BYoAI-Deployment-Platform
+    details:
+      - Architected a multi-tenant AI agent orchestration platform in Go and TypeScript with MCP tool-calling, subagent hierarchies, and OpenTelemetry.
+      - Built a containerized agent execution engine with Docker for dynamic worker allocation, security isolation, and pluggable storage systems.
+      - Developed a multi-provider LLM abstraction supporting OpenAI, Claude, Gemini, and self-hosted models across REST and event-driven pipelines.
+    skills:
+      - Go
+      - TypeScript
+      - Docker
+      - MCP
+      - OpenTelemetry
   - title: WebCraft
     start_date: Apr 2025
     end_date: Sept 2025
@@ -107,23 +122,6 @@ projects:
       - FastAPI
       - LangChain
       - Docker
-  - title: FashioNova
-    start_date: Oct 2024
-    end_date: Oct 2024
-    links:
-      github: https://github.com/robinrong1/intelligent-wardrobe/
-      website: https://devpost.com/software/fashionova
-    details:
-      - Built a virtual wardrobe & AI fashion advisor in 36 hours at Hack the Valley 9 (UofT Scarborough).
-      - Developed an OpenCV, Flask, and Socket.io pipeline for video clothing overlays with Cloudflare AI outfit suggestions.
-    skills:
-      - Typescript
-      - Next.js
-      - Python
-      - Socket.io
-      - OpenCV
-      - Cloudflare AI
-      - Flask
 extra_curriculars:
   - position: Sys-Admin and Fullstack Developer Executive
     organization: IEEE McMaster Student Branch
@@ -141,6 +139,7 @@ skills:
     - Python
     - C#
     - C++
+    - Golang
     - SQL
     - C
     - Verilog
@@ -159,10 +158,11 @@ skills:
     - GCP
     - Git
     - Docker
+    - Kafka
     - OpenShift
     - Kubernetes
+    - Redis
     - Infinispan
-    - IBM Bob
   libraries:
     - Pandas
     - TensorFlow
