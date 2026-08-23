@@ -13,12 +13,14 @@ education:
     end_date: Present
     gpa: 4.00/4.00 CGPA - Dean's Honour List
     courses:
-      - Digital Systems
-      - OOP
-      - Discrete Math
-      - Software Design
-      - DSA
+      - Intro to Software Design
+      - Concurrent Systems Design
+      - Data Structures and Algorithms
+      - Software Requirements
+      - Signals and Systems
       - Computer Architecture
+      - Linear Optimization
+      - Databases
 experiences:
   - title: Software Developer Intern
     company: IBM
@@ -28,7 +30,7 @@ experiences:
     details:
       - Built an AI diagnostic platform using IBM Bob to triage Liberty build breaks with 99% accuracy across 100 test failures, reducing incident investigation time by 2 days per break.
       - Led modernization of legacy engineering support tools (EJB/Servlets, Ruby on Rails) to React, Spring Boot, Quarkus, and OpenLiberty microservices, completing a multi-year migration of mainframe based ticketing system to Salesforce.
-      - Architected a work-distribution analytics app for 400+ developers to track engineering time across CVEs, features, and QA, replacing shared spreadsheets to save 1 day a week of overhead per manager.
+      - Architected a work-distribution analytics app for 400+ developers to track engineering time across CVEs, features, and QA, replacing shared spreadsheets to save 8 hours a week of overhead per manager.
       - Accelerated WebSphere CI/CD reliability by refactoring 20+ legacy FAT test suites into modular JUnit frameworks.
       - Diagnosed 50+ multi-platform build failures across Linux, macOS, Windows, and z/OS while maintaining core WebSphere Application Server, WebSphere Liberty, and contributing to OpenLiberty as an open source developer.
     skills:
