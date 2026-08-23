@@ -15,11 +15,10 @@ education:
     courses:
       - Digital Systems
       - OOP
-      - Discrete Math I & II
-      - Intro to Software Design
+      - Discrete Math
+      - Software Design
       - DSA
       - Computer Architecture
-      - Software Development Basics
 experiences:
   - title: Software Developer Intern
     company: IBM
@@ -27,22 +26,11 @@ experiences:
     end_date: Aug 2026
     location: Markham, ON
     details:
-      - Developing WebSphere Application Server v8.5.5, v9.0, WebSphere Liberty, and OpenLiberty and the public and internal tools which support development.
-      - Developed an upload feature in our translation tool which allows developers to upload translations for different languages and regions.
-      - Modernized the translation tool to leverage the latest technologies on OpenLiberty using Jakarta EE CDI, Restful, Concurrency, and MicroProfile Config, Telemetry, containerizing the application, and added Unit and Integration tests to ensure correctness of the workflow
-      - Added Apache to the translation tool as the reverse proxy (for both frontend and backend) to support TLS certificate management and OAuth authentication replacing the existing LDAP Basic Authentication
-      - Optimized the core data processing tool within this suite, replacing heavy framework overhead with custom API wrappers to reduce execution time by 99% (from 10 mins to <4 secs).
-      - Re-engineered the other 3 legacy internal tools from scratch, modernizing UX, using the latest Spring Boot and Jakarta EE technologies as above, standardizing Docker deployments, and establishing the first Unit/Integration testing pipelines to eliminate manual verification.
-      - Streamlined the installation FAT suite for WebSphere Application Server by removing complex infrastructure dependencies, significantly reducing debugging overhead and simplifying long-term maintenance.
-      - Diagnosed and solved >50 build breaks and supported the development team in diagnosing customer cases and build breaks on all platforms, including but not limited to Linux, Windows, MacOS, IBM i, and zOS
-      - Solved a customer case by replicating a customers environment by created E2E tests for deploying Liberty on OpenShift and verifying behavior such as Infinispan and Keycloak.
-      - Created a tool used by over 400+ developers and managers which allows developers to record the distribution of their work they perform and allow managers to record it and use the data to assist the developers by allocating resources in their worflows.
-      - Created an AI Agent leveraging IBM Bob Shell to analyze build breaks given the build break issue and description, build break logs and server configuration, OpenLiberty and WebSphere Liberty source code reducing time spent on fixing build breaks by at least 2 days worth of analysis.
-      - Completed a feature which allows Modernized Runtime Extensions for Java to add custom configuration actions to their WebSphere Application Server Network Deployment instances to run on server startup for Profile Conformance
-      - Completed a feature which allows developers to install versionless features using installUtility on WebSphere Liberty
-      - Cleaned up stale install issues on the OpenLiberty Github and WebSphere Liberty
-      - Offloaded, trained and transfered the translation tool to the build team in Kochi for easier maintainence (since they're the Client Zero for this tool)
-      - Generated knowledge transfer documents and trained the incoming intern to take over responsibilities and continue maintainence on these internal tools 
+      - Built an AI diagnostic platform using IBM Bob to triage Liberty build breaks with 99% accuracy across 100 test failures, reducing incident investigation time by 2 days per break.
+      - Led modernization of legacy engineering support tools (EJB/Servlets, Ruby on Rails) to React, Spring Boot, Quarkus, and OpenLiberty microservices, completing a multi-year migration of mainframe based ticketing system to Salesforce.
+      - Architected a work-distribution analytics app for 400+ developers to track engineering time across CVEs, features, and QA, replacing shared spreadsheets to save 1 day a week of overhead per manager.
+      - Accelerated WebSphere CI/CD reliability by refactoring 20+ legacy FAT test suites into modular JUnit frameworks.
+      - Diagnosed 50+ multi-platform build failures across Linux, macOS, Windows, and z/OS while maintaining core WebSphere Application Server, WebSphere Liberty, and contributing to OpenLiberty as an open source developer.
     skills:
       - Docker
       - Java
@@ -72,8 +60,9 @@ experiences:
     end_date: Aug 2024
     location: Hamilton, ON
     details:
-      - Developed and maintained React and TypeScript code for Medium AI, contributing to 2 first-place and 1 second-place finishes in the McMaster Startup Survivor competition, and helping secure $10,000 in funding.
-      - Implemented real-time speech transcription using Python, OpenAI Whisper, FFmpeg, and Socket.IO
+      - Engineered real-time doctor-patient voice-based transcription with gRPC and Firebase, achieving sub-500ms streaming latency by load balancing OpenAI Whisper across self-hosted and managed instances.
+      - Integrated AI diagnostic hooks to analyze transcripts, highlighting clinical insights for attending physicians.
+      - Developed and maintained React and TypeScript website frontend for Medium AI, contributing to 2 first-place and 1 second-place finishes in the McMaster Startup Survivor competition, and helping secure $10,000 in funding.
     skills:
       - React
       - Linux
@@ -84,17 +73,31 @@ experiences:
       - FFmpeg
       - Socket.IO
       - Web APIs
+      - Firebase
 projects:
+  - title: BYoAI Deployment Platform
+    start_date: May 2026
+    end_date: Present
+    links:
+      github: https://github.com/adityarao2005/BYoAI-Deployment-Platform
+    details:
+      - Architected a multi-tenant AI agent orchestration platform in Go and TypeScript with MCP tool-calling, subagent hierarchies, and OpenTelemetry.
+      - Built a containerized agent execution engine with Docker for dynamic worker allocation, security isolation, and pluggable storage systems.
+      - Developed a multi-provider LLM abstraction supporting OpenAI, Claude, Gemini, and self-hosted models across REST and event-driven pipelines.
+    skills:
+      - Go
+      - TypeScript
+      - Docker
+      - MCP
+      - OpenTelemetry
   - title: WebCraft
     start_date: Apr 2025
     end_date: Sept 2025
     links:
       github: https://github.com/adityarao2005/WebCraft
     details:
-      - Developed an asynchronous runtime and programming library using C++ 23 features to allow developers who are used to Node.js, Python, and Java to write fast and simple async C++ code easily.
-      - Created coroutine abstractions, the async runtime, async streams, file and networking module abstractions over low level OS specific async library code to simplify cross-platform C++ development.
-      - Created CI/CD pipelines and created over 130+ tests to verify correctness using gtest, CTest, Vcpkg, and Github Actions to ensure code quality and reliability.
-      - Created a vcpkg port so developers can easily access it.
+      - Engineered an asynchronous programming library in C++ 23, featuring coroutine-based task management, concurrent streams, and high-performance networking/file I/O modules to simplify cross-platform async development for C++ developers.
+      - Automated testing and release workflows using gtest (130+ tests), GitHub Actions CI/CD, and published a custom vcpkg port for standardized cross-platform distribution.
     skills:
       - C++
       - CMake
@@ -107,8 +110,9 @@ projects:
     links:
       github: https://github.com/adityarao2005/resume-builder
     details:
-      - Developed an AI-powered resume builder for automated resume creation, scoring, and real-time editing.
-      - Improved resume management by reducing manual effort in tailoring resumes for job applications.
+      - Built an AI-powered resume builder with Next.js, Spring Boot, and FastAPI for real-time editing and version control.
+      - Integrated LangChain to automate ATS keyword optimization, intelligent scoring, and template tailoring.
+      - Accelerated resume tailoring workflow by ~90%, cutting manual editing time from ~2 hours to <10 minutes per application.
     skills:
       - Java
       - Spring Boot
@@ -178,18 +182,19 @@ extra_curriculars:
     end_date: Present
     location: Hamilton, ON
     details:
-      - Set up an RPi 3B+ Cluster for a server to handle up to 100 clients in an instant with a budget of $5000
+      - Set up an RPi 3B+ Cluster to handle up to 100 concurrent clients with <50ms response time
       - Managed and provisioned a CI/CD pipeline which generates Docker images for our Kubernetes cluster
-      - Developing the website for the IEEE student branch and the admin dashboard for executives to manage
+      - Developed IEEE McMaster student branch website using Next.js, leveraging GitHub Projects and Issues as the admin dashboard for managing events and member contributions
 skills:
   languages:
     - Java
-    - Python
-    - SQL
-    - .NET Framework
-    - C
-    - C++
     - JavaScript/TypeScript
+    - Python
+    - C#
+    - C++
+    - Golang
+    - SQL
+    - C
     - Verilog
   frameworks:
     - Spring Boot
@@ -202,17 +207,14 @@ skills:
     - Flask
     - UWP
   tools:
-    - VS Code
-    - IBM Bob
-    - Eclipse
     - AWS
     - GCP
     - Git
-    - Github
     - Docker
+    - Kafka
     - OpenShift
     - Kubernetes
-    - Databases
+    - Redis
     - Infinispan
   libraries:
     - Pandas

@@ -19,7 +19,7 @@ def latex_escape(text):
         '_': r'\_',
         '{': r'\{',
         '}': r'\}',
-        '~': r'\textasciitilde{}',
+        '~': r'$\sim$',
         '^': r'\^{}',
     }
     for old, new in replacements.items():
