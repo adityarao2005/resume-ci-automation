@@ -19,7 +19,7 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \usepackage{fontawesome5}
-\usepackage[margin=2cm]{geometry}
+\usepackage[margin=0.42in]{geometry}
 \input{glyphtounicode}
 
 %----------FONT OPTIONS----------
@@ -39,13 +39,6 @@
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.7in}
-\addtolength{\textheight}{1.4in}
 
 \urlstyle{same}
 
@@ -162,7 +155,7 @@
           <BLOCK>if proj.links and 'website' in proj.links</BLOCK>
            \href{<VAR>proj.links.website</VAR>}{\faGlobe}
           <BLOCK>endif</BLOCK>
-           $|$ \emph{<BLOCK>for skill in proj.skills</BLOCK><VAR>skill | latex_escape</VAR><BLOCK>if not loop.last</BLOCK>, <BLOCK>endif</BLOCK><BLOCK>endfor</BLOCK>}}{<VAR>proj.start_date</VAR> -- <VAR>proj.end_date</VAR>}
+           $|$ \emph{<BLOCK>for skill in proj.skills</BLOCK><VAR>skill | latex_escape</VAR><BLOCK>if not loop.last</BLOCK>, <BLOCK>endif</BLOCK><BLOCK>endfor</BLOCK>}}{}
           \resumeItemListStart
             <BLOCK>for detail in proj.details</BLOCK>
             \resumeItem{<VAR>detail | latex_escape</VAR>}
