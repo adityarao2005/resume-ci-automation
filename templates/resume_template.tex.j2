@@ -119,7 +119,7 @@
       \resumeItemListStart
         \resumeItem{<VAR>edu.gpa | latex_escape</VAR>}
         <BLOCK>if edu.courses</BLOCK>
-        \resumeItem{Relevant Coursework: <BLOCK>for course in edu.courses</BLOCK><VAR>course | latex_escape</VAR><BLOCK>if not loop.last</BLOCK>, <BLOCK>endif</BLOCK><BLOCK>endfor</BLOCK>}
+        \resumeItem{\textbf{Relevant Coursework:} <BLOCK>for course in edu.courses</BLOCK><VAR>course | latex_escape</VAR><BLOCK>if not loop.last</BLOCK>, <BLOCK>endif</BLOCK><BLOCK>endfor</BLOCK>}
         <BLOCK>endif</BLOCK>
       \resumeItemListEnd
   \resumeSubHeadingListEnd

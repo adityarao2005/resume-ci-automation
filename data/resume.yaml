@@ -11,7 +11,7 @@ education:
     graduation_date: Apr 2028
     start_date: Sept 2023
     end_date: Expected Apr 2028
-    gpa: 4.00/4.00 CGPA - Dean's Honour List
+    gpa: "**4.00/4.00 CGPA** - Dean's Honour List"
     courses:
       - Intro to Software Design
       - Concurrent Systems Design
@@ -28,11 +28,11 @@ experiences:
     end_date: Aug 2026
     location: Markham, ON
     details:
-      - Developed an AI tool for Liberty build failures, automating root-cause log classification to save ~4 hours per break.
-      - Modernized legacy tools (Ruby on Rails, WAS 9 EJB) for 400+ developers into Java 21 microservices (Spring Boot, Next.js, Jakarta EE 11), cutting publish times from ~2 hours to <1 min via Kafka messaging.
-      - Engineered a work-distribution analytics dashboard in React and Quarkus, centralizing task tracking across CVEs to streamline project reporting and eliminate manual spreadsheets.
-      - Refactored 20+ legacy FAT test suites into modular JUnit frameworks to improve WebSphere CI/CD reliability.
-      - Contributed bug fixes and features to open-source OpenLiberty and WebSphere Application Server, resolving multi-platform runtime failures across Linux, macOS, Windows, and z/OS.
+      - Developed an AI tool for Liberty build failures, automating root-cause log classification to save **~4 hours per break**.
+      - Modernized legacy tools for **400+ developers** into **Java 21** microservices (Spring Boot, Next.js, Jakarta EE 11), cutting publish times from **~2 hours to <1 min** via **Kafka messaging**.
+      - Engineered a work-distribution tracking platform in **Next.js**, **Quarkus**, and **PostgreSQL**, replacing manual Kaizen spreadsheets to save **~1 hr/wk per manager**.
+      - Refactored **20+ legacy FAT test suites** into modular **JUnit** frameworks to improve WebSphere CI/CD reliability.
+      - Contributed bug fixes and features to open-source **OpenLiberty** and **WebSphere Application Server**, resolving multi-platform runtime failures.
     skills:
       - Docker
       - Java
@@ -60,9 +60,9 @@ experiences:
     end_date: Aug 2024
     location: Hamilton, ON
     details:
-      - Engineered real-time doctor-patient voice-based transcription with gRPC and Firebase, achieving sub-500ms streaming latency by load balancing OpenAI Whisper across self-hosted and managed instances.
-      - Integrated AI diagnostic hooks to analyze transcripts, highlighting clinical insights for attending physicians.
-      - Constructed responsive React and TypeScript UI for real-time transcription playback and physician dashboards.
+      - Engineered real-time doctor-patient voice-based transcription with **gRPC** and **Firebase**, achieving **sub-500ms streaming latency** by load balancing **OpenAI Whisper**.
+      - Integrated **AI diagnostic hooks** to analyze transcripts, highlighting clinical insights for attending physicians.
+      - Constructed responsive **React** and **TypeScript** UI for real-time transcription playback and physician dashboards.
     skills:
       - React
       - Linux
@@ -81,9 +81,9 @@ projects:
     links:
       github: https://github.com/adityarao2005/BYoAI-Deployment-Platform
     details:
-      - Engineered an AI agent orchestration platform in Go and TypeScript with tool-calling and observability.
-      - Containerized an execution engine with Docker for dynamic worker allocation, security isolation, and pluggable storage.
-      - Designed a multi-provider LLM abstraction supporting frontier and self-hosted models.
+      - Engineered an AI agent orchestration platform in **Go** and **TypeScript** with tool-calling and observability.
+      - Containerized an execution engine with **Docker** for dynamic worker allocation, security isolation, and pluggable storage.
+      - Designed a multi-provider **LLM abstraction** supporting frontier and self-hosted models.
     skills:
       - Go
       - TypeScript
@@ -96,8 +96,8 @@ projects:
     links:
       github: https://github.com/adityarao2005/WebCraft
     details:
-      - Authored an asynchronous library in C++23 featuring coroutine task management, timers and scheduling, concurrent streams, and high-performance file and network I/O modules to simplify cross-platform development.
-      - Automated testing and release workflows using gtest (130+ tests), GitHub Actions CI/CD (with runners on Linux GCC, Linux Clang, Windows, and MacOS), and published a custom vcpkg port for standardized cross-platform distribution.
+      - Authored an asynchronous library in **C++23** featuring **coroutine task management**, timers, scheduling, and high-performance I/O modules.
+      - Automated testing and release workflows using **gtest (130+ tests)**, **GitHub Actions CI/CD** (Linux, Windows, macOS), and published a custom **vcpkg port**.
     skills:
       - C++
       - CMake
@@ -110,9 +110,9 @@ projects:
     links:
       github: https://github.com/adityarao2005/resume-builder
     details:
-      - Built an AI resume builder with Next.js, Spring Boot, and FastAPI for real-time editing and version control.
-      - Integrated LangChain to automate ATS keyword optimization, intelligent scoring, and template tailoring.
-      - Implemented UI debouncing and reactive state management to eliminate render flickering for live resume previews.
+      - Built an AI resume builder with **Next.js**, **Spring Boot**, and **FastAPI** for real-time editing and version control.
+      - Integrated **LangChain** to automate ATS keyword optimization, intelligent scoring, and template tailoring.
+      - Implemented **UI debouncing** and **reactive state management** to eliminate render flickering for live resume previews.
     skills:
       - Java
       - Spring Boot
@@ -129,9 +129,9 @@ extra_curriculars:
     end_date: Present
     location: Hamilton, ON
     details:
-      - Set up an RPi 3B+ cluster handling up to 100 concurrent clients with <50ms response latency.
-      - Provisioned CI/CD pipelines to build and deploy container images to a Kubernetes cluster.
-      - Developed the IEEE branch website using Next.js with GitHub Projects/Issues as an admin CMS.
+      - Set up an **RPi 3B+ cluster** handling up to 100 concurrent clients with **<50ms response latency**.
+      - Provisioned **CI/CD pipelines** to build and deploy container images to a **Kubernetes cluster**.
+      - Developed the IEEE branch website using **Next.js** with GitHub Projects/Issues as an admin CMS.
 skills:
   languages:
     - Java
@@ -147,6 +147,7 @@ skills:
     - Spring Boot
     - Jakarta EE
     - MicroProfile
+    - Quarkus
     - Hibernate
     - Express
     - Next.js
