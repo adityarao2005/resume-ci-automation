@@ -1,11 +1,12 @@
 
+import re
 import yaml
 from jinja2 import Environment, FileSystemLoader
 
 
 # Function to escape LaTeX special characters
 def latex_escape(text):
-    """Escape special LaTeX characters"""
+    """Escape special LaTeX characters and convert Markdown **bold** to \\textbf{}"""
     if not isinstance(text, str):
         return text
     replacements = {
@@ -14,8 +15,8 @@ def latex_escape(text):
         '%': r'\%',
         '$': r'\$',
         '#': r'\#',
-        "<": r'\textless',
-        ">": r'\textgreater',
+        "<": r'\textless ',
+        ">": r'\textgreater ',
         '_': r'\_',
         '{': r'\{',
         '}': r'\}',
@@ -24,6 +25,8 @@ def latex_escape(text):
     }
     for old, new in replacements.items():
         text = text.replace(old, new)
+    # Convert Markdown **text** to \textbf{text}
+    text = re.sub(r'\*\*(.*?)\*\*', r'\\textbf{\1}', text)
     return text
 
 def generate_latex_resume() -> str:
