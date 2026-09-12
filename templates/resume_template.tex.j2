@@ -188,10 +188,18 @@
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.0in, label={}]
     \small{\item{
+        <BLOCK>if skills.languages</BLOCK>
         \textbf{Languages}{: <BLOCK>for item in skills.languages</BLOCK><VAR>item | latex_escape</VAR><BLOCK>if not loop.last</BLOCK>, <BLOCK>endif</BLOCK><BLOCK>endfor</BLOCK>} \\
+        <BLOCK>endif</BLOCK>
+        <BLOCK>if skills.frameworks</BLOCK>
         \textbf{Frameworks}{: <BLOCK>for item in skills.frameworks</BLOCK><VAR>item | latex_escape</VAR><BLOCK>if not loop.last</BLOCK>, <BLOCK>endif</BLOCK><BLOCK>endfor</BLOCK>} \\
+        <BLOCK>endif</BLOCK>
+        <BLOCK>if skills.tools</BLOCK>
         \textbf{Developer Tools}{: <BLOCK>for item in skills.tools</BLOCK><VAR>item | latex_escape</VAR><BLOCK>if not loop.last</BLOCK>, <BLOCK>endif</BLOCK><BLOCK>endfor</BLOCK>} \\
+        <BLOCK>endif</BLOCK>
+        <BLOCK>if skills.libraries</BLOCK>
         \textbf{Libraries}{: <BLOCK>for item in skills.libraries</BLOCK><VAR>item | latex_escape</VAR><BLOCK>if not loop.last</BLOCK>, <BLOCK>endif</BLOCK><BLOCK>endfor</BLOCK>} \\
+        <BLOCK>endif</BLOCK>
         <BLOCK>if skills.hobbies</BLOCK>
           \textbf{Hobbies}{: <BLOCK>for item in skills.hobbies</BLOCK><VAR>item | latex_escape</VAR><BLOCK>if not loop.last</BLOCK>, <BLOCK>endif</BLOCK><BLOCK>endfor</BLOCK>} \\
         <BLOCK>endif</BLOCK>
