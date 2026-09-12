@@ -28,11 +28,11 @@ experiences:
     end_date: Aug 2026
     location: Markham, ON
     details:
+      - Contributed 27 PRs (46 commits) to open-source **OpenLiberty** and 2500+ total contributions across **WebSphere Liberty**, **WebSphere Application Server**, and internal L3 Support Tools.
       - Developed an AI tool for Liberty build failures, automating root-cause log classification to save **~4 hours per break**.
       - Modernized legacy tools for **400+ developers** into **Java 21** microservices (Spring Boot, Next.js, Jakarta EE 11), cutting publish times from **~2 hours to <1 min** via **Kafka messaging**.
       - Engineered a work-distribution tracking platform in **Next.js**, **Quarkus**, and **PostgreSQL**, replacing manual Kaizen spreadsheets to save **~1 hr/wk per manager**.
       - Refactored **20+ legacy FAT test suites** into modular **JUnit** frameworks to improve WebSphere CI/CD reliability.
-      - Contributed 27 PRs (46 commits) to open-source **OpenLiberty** and 2500+ total contributions across **WebSphere Liberty**, **WebSphere Application Server**, and internal L3 Support Tools.
     skills:
       - Docker
       - Java
