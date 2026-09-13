@@ -94,8 +94,8 @@ projects:
     links:
       github: https://github.com/adityarao2005/WebCraft
     details:
-      - Authored an asynchronous library in **C++23** featuring coroutine task management, asynchronous timers, task scheduling, and high-performance file and socket (TCP and UDP) I/O modules
-      - Leveraged io_uring on Linux to achieve 160K req/s on HTTP benchmarks; 33% faster than Nginx and 4× faster than Node.js.
+      - Authored an asynchronous library in **C++23** featuring coroutine task management, asynchronous timers, task scheduling, and high-performance file and socket (TCP and UDP) I/O modules.
+      - Achieved **160K req/s** on HTTP benchmarks on Linux; **33% faster than Nginx and 4× faster than Node.js**.
       - Automated CI using **gtest (130+ tests)**, **GitHub Actions CI/CD** (Linux, Windows, macOS).
     skills:
       - C++
