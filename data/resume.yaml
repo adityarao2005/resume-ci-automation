@@ -30,8 +30,8 @@ experiences:
     details:
       - Contributed **27 PRs (46 commits)** to open source **OpenLiberty** and **2500+ total contributions** across **WebSphere Liberty**, **WebSphere Application Server**, and internal customer support tools for developers.
       - Developed an AI tool for Liberty build failures, automating root-cause log classification to save **~4 hours per failure**.
-      - Modernized legacy tools for **400+ developers** into **Java 21** microservices (Spring Boot, Next.js, Jakarta EE 11), cutting publish times from **~2 hours to <1 min** via **Kafka messaging**.
-      - Engineered a work-distribution tracking platform in **Next.js**, **Quarkus**, and **PostgreSQL**, replacing manual Kaizen spreadsheets to save **~1 hr/wk per manager**.
+      - Modernized legacy tools for **400+ developers** into **Java 21** microservices (Spring Boot, Next.js, Jakarta EE 11), cutting publish times from **~120 min to <1 min** via **Kafka messaging**.
+      - Engineered a work-distribution tracking platform in **Next.js**, **Quarkus**, and **PostgreSQL**, replacing manual Kaizen spreadsheets to save **~60 min/wk per manager**.
     skills:
       - Docker
       - Java
@@ -94,8 +94,9 @@ projects:
     links:
       github: https://github.com/adityarao2005/WebCraft
     details:
-      - Authored an asynchronous library in **C++23** featuring coroutine task management, asynchronous timers, task scheduling, and high-performance file and socket (TCP and UDP) I/O modules; leveraged io_uring on Linux to achieve 160K req/s on HTTP benchmarks — 33% faster than Nginx and 4× faster than Node.js.
-      - Automated testing and release workflows using **gtest (130+ tests)**, **GitHub Actions CI/CD** (Linux, Windows, macOS), and published a custom **vcpkg port**.
+      - Authored an asynchronous library in **C++23** featuring coroutine task management, asynchronous timers, task scheduling, and high-performance file and socket (TCP and UDP) I/O modules
+      - Leveraged io_uring on Linux to achieve 160K req/s on HTTP benchmarks; 33% faster than Nginx and 4× faster than Node.js.
+      - Automated CI using **gtest (130+ tests)**, **GitHub Actions CI/CD** (Linux, Windows, macOS).
     skills:
       - C++
       - CMake
