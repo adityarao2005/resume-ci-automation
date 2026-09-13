@@ -51,6 +51,22 @@ experiences:
       - Kubernetes
       - Java EE
       - zOS
+  - title: Teaching Assistant - Digital Systems
+    company: McMaster University
+    start_date: Sep 2026
+    end_date: Dec 2026
+    location: Hamilton, ON
+    details:
+      - Guided **20+ students** in digital logic design, RTL simulation, and synthesis using **Verilog** and **Quartus**.
+      - Debugged hardware-software integration on **Altera DE1-SoC FPGAs** and verified **Embedded C** binaries via Eclipse.
+      - Revamped lab manuals and troubleshooting FAQs, streamlining lab workflows and issue resolution for students.
+    skills:
+      - Verilog
+      - Intel Quartus
+      - FPGA
+      - Embedded C
+      - Eclipse
+      - Digital Systems
   - title: Full Stack Developer Intern
     company: Medium AI
     links:
@@ -95,7 +111,7 @@ projects:
       github: https://github.com/adityarao2005/WebCraft
     details:
       - Authored an asynchronous runtime in **C++23** featuring asynchronous timers, task scheduling, and high-performance file and socket (TCP and UDP) I/O modules.
-      - Achieved **160K req/s** on HTTP benchmarks on Linux; **33% faster than Nginx and 4× faster than Node.js**.
+      - Sustained **160K req/s** on synthetic **wrk** HTTP benchmarks via an **io_uring** event loop on Linux.
       - Automated CI using **gtest (130+ tests)**, **GitHub Actions CI/CD** (Linux, Windows, macOS).
     skills:
       - C++
@@ -103,23 +119,6 @@ projects:
       - Vcpkg
       - Asynchronous Programming
       - Github Actions
-  - title: Resume Builder
-    start_date: Aug 2024
-    end_date: Feb 2025
-    links:
-      github: https://github.com/adityarao2005/resume-builder
-    details:
-      - Built an AI resume builder with **Next.js**, **Spring Boot**, and **FastAPI** for real-time editing and version control.
-      - Integrated **LangChain** to automate ATS keyword optimization, intelligent scoring, and template tailoring.
-    skills:
-      - Java
-      - Spring Boot
-      - Next.js
-      - Typescript
-      - Python
-      - FastAPI
-      - LangChain
-      - Docker
 extra_curriculars:
   - position: Sys-Admin and Fullstack Developer Executive
     organization: IEEE McMaster Student Branch
