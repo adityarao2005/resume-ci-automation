@@ -11,7 +11,7 @@ education:
     graduation_date: Apr 2028
     start_date: Sep 2023
     end_date: Apr 2028 (Expected)
-    gpa: "**3.91/4.00 CGPA** - Dean's Honour List"
+    gpa: "**3.99/4.00 CGPA** - Dean's Honour List"
     courses:
       - Data Structures and Algorithms
       - Intro to Software Design
@@ -57,7 +57,7 @@ experiences:
     end_date: Dec 2026
     location: Hamilton, ON
     details:
-      - Guided **20+ students** in digital logic design, RTL simulation, and synthesis using **Verilog** and **Quartus**.
+      - Guided **50+ students** in digital logic design, RTL simulation, and synthesis using **Verilog** and **Quartus**.
       - Debugged hardware-software integration on **Altera DE1-SoC FPGAs** and verified **Embedded C** binaries via Eclipse.
       - Revamped lab manuals and troubleshooting FAQs, streamlining lab workflows and issue resolution for students.
     skills:
