@@ -2,9 +2,10 @@
 name: resume-review
 description: >-
   Use this skill to review and score the generated resume PDF (out/resume.pdf).
-  Builds the latest PDF via the resume-automation workflow, then evaluates it
-  against weighted criteria targeting SWE internship/co-op roles at major tech
-  companies (Google, Amazon, Microsoft, Meta, Apple, IBM, etc.).
+  Builds the latest PDF via the resume-automation workflow, then performs a dual-track
+  evaluation: an ATS Parsability Audit (machine extraction, icon glyphs, keywords) and
+  a Recruiter Visual & Interactive Review (browser/PDF viewer scannability, clickable
+  links, weighted impact criteria) targeting top-tier SWE internship/co-op roles.
 ---
 
 # Resume Review Skill
@@ -20,71 +21,93 @@ docker compose up --build
 
 This produces [out/resume.pdf](file:///home/aditya/projects/resume-ci-automation/out/resume.pdf).
 
+## Review Methodology
+
+Top tech companies (Google, Amazon, Meta, Microsoft, Apple, IBM, Bloomberg, Uber, etc.) evaluate resumes through a two-stage pipeline:
+1. **The Machine Gate (ATS)**: Automated ingestion, text extraction, tokenization, and keyword matching.
+2. **The Human Gate (Recruiter / Hiring Manager)**: A quick 6–10 second visual scan in a browser PDF viewer or desktop reader, followed by clicking portfolio/GitHub links and checking engineering depth.
+
+A complete review must evaluate **both** dimensions.
+
+---
+
 ## Review Procedure
 
-### 1. Open the Resume
+### Step 1: Text Extraction & ATS Ingestion Check
 
-Read the generated PDF at `out/resume.pdf`.
+Extract the raw text from `out/resume.pdf` using `pdftotext` to simulate what an ATS parser ingests:
 
-### 2. Target Profile
+```bash
+pdftotext out/resume.pdf -
+```
 
-This resume targets **software engineering internship / co-op positions** at
-major technology companies including but not limited to:
+Check for:
+- **Font & Icon Corruption**: Do FontAwesome / LaTeX icons decode as strange symbols (e.g. `ƒ`, `ï`, `§`, `€`) that corrupt contact info or project titles?
+- **Text Flow & Parsing**: Are columns, dates, titles, and institutions properly grouped, or do lines interleave?
+- **Contact Extraction**: Can a parser cleanly extract name, email, phone number, LinkedIn, GitHub, and portfolio URL?
+- **Standard Section Headings**: Are headings recognizable standard ATS sections (Education, Experience, Projects, Technical Skills)?
+- **Keyword Density**: Are core SWE keywords indexed (e.g., specific languages, distributed systems, containerization, cloud, testing, CI/CD)?
 
-- Google, Amazon, Microsoft, Meta, Apple, IBM, Netflix, Salesforce, Oracle,
-  Adobe, Uber, Stripe, Databricks, Palantir, etc.
+### Step 2: Recruiter Visual & Interactive Review
 
-Applicable roles include: Software Development Intern, Software Engineering
-Intern, Full Stack Developer Intern, Full Stack Engineer Intern, Backend
-Engineer Intern, DevOps Intern, and any SWE-adjacent co-op role.
+Simulate opening the PDF in a web browser (Chrome/Edge/Firefox PDF viewer) or standard PDF reader.
 
-### 3. Scoring Criteria
+Assess:
+- **First 7-Second Scan**: Does the visual hierarchy immediately draw the eye to the strongest achievements (top companies, high GPA, stand-out metrics)?
+- **Whitespace & Density**: Is the layout balanced? Does it cleanly fill exactly one page without underfilling or spilling onto page 2?
+- **Clickable Links & Interactivity**:
+  - Verify every hyperlink configured in [resume.yaml](file:///home/aditya/projects/resume-ci-automation/data/resume.yaml) and rendered via [resume_template.tex.j2](file:///home/aditya/projects/resume-ci-automation/templates/resume_template.tex.j2):
+    - Email (`mailto:`)
+    - LinkedIn (`https://linkedin.com/...`)
+    - GitHub profile (`https://github.com/...`)
+    - Personal website / portfolio
+    - Project repository links (GitHub icons / URLs)
+    - Company / startup links
+  - Verify that links are valid, click targets are well-positioned, and URLs are properly prefixed (e.g., `https://`).
+- **Typography & Polish**: Consistent margins, clean bullet alignment, appropriate font scaling.
 
-Evaluate the resume across four weighted categories. Be **harsh** where the
-resume falls short but **recognize genuine achievements**. Think like a
-recruiter at a top-tier tech company — would you advance this candidate?
+### Step 3: Content Scoring (Weighted Criteria)
 
-| Category                   | Max Score | What to Assess |
-| :------------------------- | --------: | :------------- |
-| **Impact & Results**       |        40 | Quantified outcomes, measurable achievements, scope of contributions. Does the candidate demonstrate they shipped real impact? Vague claims with no metrics score low. |
-| **Clarity & Conciseness**  |        20 | Bullet quality, action-verb usage, readability, formatting, whitespace balance, and overall scannability. A recruiter spends ~7 seconds on a first pass — does this resume survive? |
-| **Technical Relevance**    |        20 | Alignment of skills, technologies, and projects with what top tech companies look for in SWE interns. Relevant tech stacks, system design awareness, and modern tooling. |
-| **Leadership & Initiative** |        20 | Evidence of ownership, mentorship, open-source contributions, club/org leadership, hackathon wins, or going beyond the job description. |
+Evaluate the resume content targeting **Software Engineering Internship / Co-op** roles across four weighted categories:
 
-### 4. Calibration Scale
+| Category | Max Score | Assessment Criteria |
+| :--- | :---: | :--- |
+| **Impact & Results** | 40 | Quantified outcomes, measurable metrics (latency, throughput, users, hours saved), scope of shipped systems. Vague bullets score low. |
+| **Clarity & Conciseness** | 20 | Action-verb quality, strong bullet structure (Action + Context + Impact), readability, scannability under rapid recruiter review. |
+| **Technical Relevance** | 20 | Alignment with modern SWE expectations at major tech companies (systems programming, cloud-native tech, modern stacks, testing, CI/CD). |
+| **Leadership & Initiative** | 20 | Open-source contributions, student leadership, TA/mentorship, independent engineering initiatives, ownership beyond routine tasks. |
 
-Use this calibration to anchor your scores:
+#### Calibration Scale
+- **0–49% (Reject)**: Unreadable, missing key sections, no metrics, broken formatting.
+- **50–69% (Average)**: Meets baseline requirements, but generic; unlikely to stand out in high-volume applicant pools.
+- **70–84% (Strong)**: Clear impact, verified links, relevant modern tech, solid leadership signals; competitive for top tech screens.
+- **85–100% (Exceptional / Instant Screen)**: World-class achievements, undeniable engineering depth, top-tier quantification, flawless presentation.
 
-- **0 %** — Absolute reject. Resume is irrelevant, unreadable, or empty.
-- **25 %** — Below average. Missing key sections, no metrics, poor formatting.
-- **50 %** — Average. Meets baseline expectations but nothing stands out.
-- **75 %** — Strong. Clear impact, good formatting, relevant tech, some leadership signals.
-- **100 %** — Instant hire. Think world-class candidates (e.g., Andrej Karpathy
-  or Yann LeCun applying for an intern role at OpenAI/Anthropic — undeniable
-  domain mastery and accomplishments).
+---
 
-### 5. Output Format
+## Output Format
 
-Produce a structured review with:
+When executing `/resume-review`, provide the report structured as follows:
 
-1. **Per-category breakdown**: For each of the four categories, provide:
-   - The score (e.g., `32 / 40`)
-   - 2–4 bullet points of specific praise or critique with references to actual
-     resume content
-2. **Overall Score**: A single score **out of 10**, derived from the weighted
-   category totals (sum the four category scores to get a percentage, then map
-   to the 0–10 scale). Justify this score in 1–2 sentences.
-3. **Top 3 Strengths**: What this resume does best.
-4. **Top 3 Areas for Improvement**: Actionable, specific suggestions (not
-   generic advice like "add more metrics" — point to *which* bullets need it).
-5. **Recruiter Verdict**: A one-line gut-check: _"Would I advance this candidate
-   to a phone screen?"_ — Yes / Borderline / No, with a brief rationale.
+### 1. ATS Parsability Audit
+- **Extraction Fidelity**: Pass / Warning / Fail (note any icon artifacts, encoding glitches, or corrupted contact strings).
+- **Section & Contact Extraction**: Assessment of how cleanly ATS parsers extract name, contact details, education, and job history.
+- **Keyword & Searchability Index**: Key technical tokens detected vs. expected for targeted SWE roles.
 
-### 6. Review Context
+### 2. Recruiter Visual & Interactive Review
+- **Visual Presentation & Scannability**: First-glance impression, layout balance, whitespace, one-page constraint.
+- **Interactive Links Check**:
+  - List of all interactive links found (Email, LinkedIn, GitHub, Portfolio, Projects).
+  - Status of each link (format, target URL, clickability).
 
-- The resume source data lives in
-  [data/resume.yaml](file:///home/aditya/projects/resume-ci-automation/data/resume.yaml).
-- The LaTeX template is at
-  [templates/resume_template.tex.j2](file:///home/aditya/projects/resume-ci-automation/templates/resume_template.tex.j2).
-- When suggesting improvements, reference specific YAML keys or bullet text so
-  the user can act on feedback immediately.
+### 3. Content Scoring Breakdown
+- **Impact & Results**: Score (`X / 40`) with 2–4 detailed points of praise/critique.
+- **Clarity & Conciseness**: Score (`X / 20`) with 2–4 detailed points.
+- **Technical Relevance**: Score (`X / 20`) with 2–4 detailed points.
+- **Leadership & Initiative**: Score (`X / 20`) with 2–4 detailed points.
+
+### 4. Overall Score & Verdict
+- **Overall Score**: `X.X / 10` (mapped from total percentage) with a 1–2 sentence justification.
+- **Recruiter Verdict**: **Yes / Borderline / No** with a clear rationale.
+- **Top 3 Strengths**: Core competitive advantages of the resume.
+- **Top 3 Actionable Fixes**: Exact, high-impact edits with file and line references to [data/resume.yaml](file:///home/aditya/projects/resume-ci-automation/data/resume.yaml) or [templates/resume_template.tex.j2](file:///home/aditya/projects/resume-ci-automation/templates/resume_template.tex.j2).
