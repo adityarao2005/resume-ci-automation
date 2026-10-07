@@ -94,7 +94,7 @@ projects:
     links:
       github: https://github.com/adityarao2005/BYoAI-Deployment-Platform
     details:
-      - Built an open-source platform for deploying AI agents that execute tasks in sandboxed Docker environments, using a Go daemon (40 MB RSS) for isolated command execution and a TypeScript/Bun service for model orchestration and tool routing.
+      - Built an open-source platform deploying AI agents in sandboxed **Docker** environments, using a **Go** daemon (**40 MB RSS**) for isolated execution and a **TypeScript/Bun** service for model orchestration and tool routing.
       - Engineered pluggable **event routing** across Redis, RabbitMQ, and Kafka, and a custom **MCP-over-RPC transport** tunneling tool servers inside remote Docker containers.
       - Built a React 19 web UI and Go terminal TUI with OAuth2 (confidential + PKCE), declarative tool ACLs, and human-in-the-loop approval gates; benchmarked security intercepts at **486ms P50**.
     skills:
