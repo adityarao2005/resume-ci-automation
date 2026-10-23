@@ -66,7 +66,7 @@
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
-      \textbf{\textit{\small#3}} & \textit{\small #4} \\
+      \textit{\small#3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -131,8 +131,8 @@
 
   <BLOCK>for exp in experiences</BLOCK>
     \resumeSubheading
-      {<VAR>exp.title | latex_escape</VAR>}{<VAR>exp.start_date</VAR> -- <VAR>exp.end_date</VAR>}
-      {<VAR>exp.company | latex_escape</VAR>}{<VAR>exp.location | latex_escape</VAR>}
+      {<VAR>exp.company | latex_escape</VAR>}{<VAR>exp.start_date</VAR> -- <VAR>exp.end_date</VAR>}
+      {<VAR>exp.title | latex_escape</VAR>}{<VAR>exp.location | latex_escape</VAR>}
       \resumeItemListStart
         <BLOCK>for detail in exp.details</BLOCK>
         \resumeItem{<VAR>detail | latex_escape</VAR>}
