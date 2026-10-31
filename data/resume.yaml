@@ -58,8 +58,8 @@ experiences:
     end_date: Dec 2026
     location: Hamilton, ON
     details:
-      - Led digital systems labs for 50+ students, graded prelabs and demonstrations, and supported Verilog design and FPGA debugging.
-      - Validated and improved lab guides covering Nios II systems and embedded C programs for DRAM read/write testing on DE1-SoC FPGAs.
+      - Led digital systems labs for 50+ students, graded prelabs and demos, and supported Verilog design and FPGA debugging.
+      - Validated and improved lab guides covering embedded C on NIOS II for DRAM read/write testing on DE1-SoC FPGAs.
     skills:
       - Verilog
       - Intel Quartus
@@ -76,7 +76,7 @@ experiences:
     location: Hamilton, ON
     details:
       - Engineered real-time doctor-patient voice-based transcription with **gRPC** and **Firebase**, achieving **sub-500ms streaming latency** by load balancing **OpenAI Whisper**.
-      - Implemented FFmpeg audio preprocessing and Firebase transcript synchronization to stream transcription updates to the web UI.
+      - Implemented FFmpeg audio preprocessing and Firebase transcript synchronization to stream transcription updates to UI.
     skills:
       - React
       - Linux
