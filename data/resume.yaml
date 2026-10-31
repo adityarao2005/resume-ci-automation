@@ -27,12 +27,12 @@ experiences:
     end_date: Aug 2026
     location: Markham, ON
     details:
-      - Rearchitected patch publishing with containerized Java services and Kafka workers, cutting full-batch publishing from half a day to ~10 minutes.
-      - Built an AI agent to diagnose build failures using logs, source code, and team-specific workflows, saving ~4 hours per failure.
-      - Rebuilt customer-issue tracking to prevent data drift by separating authoritative support records from local approval requests.
-      - Added versionless feature installation to Liberty’s installUtility and rewrote WebSphere installation tests in JUnit.
-      - Built work-allocation tracking for 400+ developers and managers, replacing spreadsheets and saving ~60 minutes per person weekly.
-      - Delivered 27 merged OpenLiberty PRs and 100+ merged internal PRs across WebSphere products and developer infrastructure.
+      - Rearchitected patch publishing into Java services with Kafka workers, cutting publishing from half a day to ~10 minutes.
+      - Built an AI agent diagnosing build failures against logs and source code, saving ~4 hours per failure.
+      - Rebuilt customer-issue tracking, eliminating duplicated ticket data to prevent synchronization bugs.
+      - Added versionless installation to Liberty’s installUtility and rewrote WebSphere installation tests in JUnit.
+      - Replaced spreadsheets with work-allocation tracking for 400+ staff, saving ~60 mins per person weekly.
+      - Delivered 27 merged OpenLiberty PRs and 100+ merged internal PRs across WebSphere and developer tooling.
     skills:
       - Docker
       - Java
