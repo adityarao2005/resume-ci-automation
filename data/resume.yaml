@@ -14,7 +14,6 @@ education:
     gpa: "**3.99/4.00 CGPA** - Dean's Honour List"
     courses:
       - Data Structures and Algorithms
-      - Intro to Software Design
       - Concurrent Systems Design
       - Software Requirements
       - Large System Design
@@ -28,9 +27,9 @@ experiences:
     end_date: Aug 2026
     location: Markham, ON
     details:
+      - Modernized legacy tools for **400+ developers** into Java 21 data and event-driven microservices, cutting artifact publish times from **~120 min to <1 min** via **Kafka messaging**.
       - Contributed **27 open-source bug fix and feature PRs** to **OpenLiberty** and shipped **100+ internal bug fix and feature PRs** for legacy developer infrastructure, **WebSphere Application Server** and **WebSphere Liberty**.
       - Developed an AI tool for Liberty build failures, automating root-cause log classification to save **~4 hours per failure**.
-      - Modernized legacy tools for **400+ developers** into Java 21 data and event-driven microservices, cutting artifact publish times from **~120 min to <1 min** via **Kafka messaging**.
       - Engineered a work-distribution tracking platform replacing spreadsheets to save **~60 min/wk per manager**.
     skills:
       - Docker
@@ -57,8 +56,8 @@ experiences:
     end_date: Dec 2026
     location: Hamilton, ON
     details:
-      - Guided **50+ students** in digital logic design, RTL simulation, and synthesis using **Verilog** and **Quartus**.
-      - Debugged hardware-software integration on **Altera DE1-SoC FPGAs** and verified **Embedded C** binaries via Eclipse.
+      - Led digital systems labs for 50+ students, graded prelabs and demonstrations, and supported Verilog design and FPGA debugging.
+      - Validated and improved lab guides covering Nios II systems and embedded C programs for DRAM read/write testing on DE1-SoC FPGAs.
     skills:
       - Verilog
       - Intel Quartus
@@ -75,7 +74,7 @@ experiences:
     location: Hamilton, ON
     details:
       - Engineered real-time doctor-patient voice-based transcription with **gRPC** and **Firebase**, achieving **sub-500ms streaming latency** by load balancing **OpenAI Whisper**.
-      - Integrated **AI diagnostic hooks** to analyze transcripts, highlighting clinical insights for attending physicians.
+      - Implemented FFmpeg audio preprocessing and Firebase transcript synchronization to stream transcription updates to the web UI.
     skills:
       - React
       - Linux
@@ -96,7 +95,7 @@ projects:
     details:
       - Built an open-source platform deploying AI agents in sandboxed **Docker** environments, using a **Go** daemon (**40 MB RSS**) for isolated execution and a **TypeScript/Bun** service for model orchestration and tool routing.
       - Engineered pluggable **event routing** across Redis, RabbitMQ, and Kafka, and a custom **MCP-over-RPC transport** tunneling tool servers inside remote Docker containers.
-      - Built a React 19 web UI and Go terminal TUI with OAuth2 (confidential + PKCE), declarative tool ACLs, and human-in-the-loop approval gates; benchmarked security intercepts at **486ms P50**.
+      - Built a React 19 web UI and Go terminal TUI with OAuth2 (confidential + PKCE), declarative tool ACLs, and human-in-the-loop approval gates.
     skills:
       - Go
       - TypeScript
