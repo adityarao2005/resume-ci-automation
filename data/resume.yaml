@@ -27,10 +27,12 @@ experiences:
     end_date: Aug 2026
     location: Markham, ON
     details:
-      - Modernized legacy tools for **400+ developers** into Java 21 data and event-driven microservices, cutting artifact publish times from **~120 min to <1 min** via **Kafka messaging**.
-      - Contributed **27 open-source bug fix and feature PRs** to **OpenLiberty** and shipped **100+ internal bug fix and feature PRs** for legacy developer infrastructure, **WebSphere Application Server** and **WebSphere Liberty**.
-      - Developed an AI tool for Liberty build failures, automating root-cause log classification to save **~4 hours per failure**.
-      - Engineered a work-distribution tracking platform replacing spreadsheets to save **~60 min/wk per manager**.
+      - Rearchitected legacy software-patch publishing into containerized Java services with Kafka workers and PostgreSQL, reducing full-batch publishing from half a day to around 10 minutes.
+      - Built an AI agent to investigate build failures using logs, traces, and source code, invoke team-specific diagnostic workflows, and recommend fixes, saving ~4 hours per failure.
+      - Rebuilt customer-issue tracking to address synchronization bugs, keeping the upstream support system authoritative for ticket data and storing approval requests separately.
+      - Added versionless feature installation to a Java application server’s installation utility and rewrote its installation functional test suite in JUnit for easier maintenance and debugging.
+      - Built a centralized work-allocation platform with developer submissions, manager approvals, and reporting exports, replacing fragmented spreadsheets across the organization and saving ~60 minutes per person weekly.
+      - Delivered 27 merged open-source PRs to OpenLiberty and 100+ merged internal PRs across WebSphere products and developer infrastructure.
     skills:
       - Docker
       - Java
