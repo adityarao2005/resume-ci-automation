@@ -27,12 +27,12 @@ experiences:
     end_date: Aug 2026
     location: Markham, ON
     details:
-      - Rearchitected legacy software-patch publishing into containerized Java services with Kafka workers and PostgreSQL, reducing full-batch publishing from half a day to around 10 minutes.
-      - Built an AI agent to investigate build failures using logs, traces, and source code, invoke team-specific diagnostic workflows, and recommend fixes, saving ~4 hours per failure.
-      - Rebuilt customer-issue tracking to address synchronization bugs, keeping the upstream support system authoritative for ticket data and storing approval requests separately.
-      - Added versionless feature installation to a Java application server’s installation utility and rewrote its installation functional test suite in JUnit for easier maintenance and debugging.
-      - Built a centralized work-allocation platform with developer submissions, manager approvals, and reporting exports, replacing fragmented spreadsheets across the organization and saving ~60 minutes per person weekly.
-      - Delivered 27 merged open-source PRs to OpenLiberty and 100+ merged internal PRs across WebSphere products and developer infrastructure.
+      - Rearchitected patch publishing with containerized Java services and Kafka workers, cutting full-batch publishing from half a day to ~10 minutes.
+      - Built an AI agent to diagnose build failures using logs, source code, and team-specific workflows, saving ~4 hours per failure.
+      - Rebuilt customer-issue tracking to prevent data drift by separating authoritative support records from local approval requests.
+      - Added versionless feature installation to Liberty’s installUtility and rewrote WebSphere installation tests in JUnit.
+      - Built work-allocation tracking for 400+ developers and managers, replacing spreadsheets and saving ~60 minutes per person weekly.
+      - Delivered 27 merged OpenLiberty PRs and 100+ merged internal PRs across WebSphere products and developer infrastructure.
     skills:
       - Docker
       - Java
