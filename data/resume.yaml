@@ -29,9 +29,9 @@ experiences:
     details:
       - Rearchitected patch publishing into Java services with Kafka workers, cutting publishing from half a day to ~10 minutes.
       - Built an AI agent diagnosing build failures against logs and source code, saving ~4 hours per failure.
-      - Rebuilt customer-issue tracking, eliminating duplicated ticket data to prevent synchronization bugs.
+      - Rebuilt customer-issue tracking, preventing synchronization bugs, separating support ticket data from approval requests.
       - Added versionless installation to Liberty’s installUtility and rewrote WebSphere installation tests in JUnit.
-      - Replaced spreadsheets with work-allocation tracking for 400+ staff, saving ~60 mins per person weekly.
+      - Replaced spreadsheets with work-allocation tracking for 400+ staff, saving ~60 minutes per person weekly.
       - Delivered 27 merged OpenLiberty PRs and 100+ merged internal PRs across WebSphere and developer tooling.
     skills:
       - Docker
@@ -75,8 +75,8 @@ experiences:
     end_date: Aug 2024
     location: Hamilton, ON
     details:
-      - Engineered real-time doctor-patient voice-based transcription with **gRPC** and **Firebase**, achieving **sub-500ms streaming latency** by load balancing **OpenAI Whisper**.
-      - Implemented FFmpeg audio preprocessing and Firebase transcript synchronization to stream transcription updates to UI.
+      - Built real-time doctor–patient transcription using load-balanced gRPC Whisper services and Firebase, achieving sub-500ms streaming latency.
+      - Implemented FFmpeg audio preprocessing and transcript synchronization to stream transcription updates to UI.
     skills:
       - React
       - Linux
