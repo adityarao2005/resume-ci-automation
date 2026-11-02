@@ -75,7 +75,7 @@ experiences:
     end_date: Aug 2024
     location: Hamilton, ON
     details:
-      - Built real-time doctor–patient transcription using load-balanced gRPC Whisper services and Firebase, achieving sub-500ms streaming latency.
+      - Built real-time doctor–patient transcription using browser audio streaming, load-balanced gRPC Whisper services, and Firebase.
       - Implemented FFmpeg audio preprocessing and transcript synchronization to stream transcription updates to UI.
     skills:
       - React
